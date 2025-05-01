@@ -102,6 +102,14 @@ p {
     font-size: 1.125rem;
 }
 
+/* Profile Picture Styling */
+#contact .flex img {
+    width: 5rem;  /* Adjust size */
+    height: 5rem; /* Adjust size */
+    border-radius: 50%;  /* Makes the image circular */
+    border: 4px solid #d1d5db;  /* Border styling */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     #contact .grid {
