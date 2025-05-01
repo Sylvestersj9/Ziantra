@@ -537,7 +537,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ziantra | Creative Portfolio</title>
-    <!-- Add your other head elements, links to stylesheets, etc. -->
+<!-- Add your other head elements, links to stylesheets, etc. -->
 </head>
 <body>
 <script>
@@ -550,21 +550,54 @@
         let content = '';
         if (projectId === 'project1') {
             content = `
-                <h3 class="text-3xl font-bold mb-4">Minimal Brand Identity</h3>
+                <h3 class="text-3xl font-bold mb-4">AI-Driven Appointment Booking Agent for Dental Practices</h3>
                 <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-80 object-cover mb-4" />
-                <p class="text-lg text-gray-600">A visual identity system for a modern furniture brand, including logo design, brand guidelines, and product packaging.</p>
+                <p class="text-lg text-gray-600">This AI-powered agent automates phone calls and appointment bookings for dental practices. It integrates directly with the dentist’s calendar, handles customer queries, schedules appointments, sends confirmation emails, and sends reminders, all while saving time for the staff.</p>
+                
+                <h4 class="text-xl font-semibold mt-4 mb-2">Key Features:</h4>
+                <ul class="list-disc list-inside text-lg text-gray-600">
+                    <li><strong>Automated Phone Call Handling</strong>: Answers calls, schedules appointments, and handles customer queries.</li>
+                    <li><strong>Real-Time Calendar Integration</strong>: Reads and modifies the dentist’s calendar in real-time.</li>
+                    <li><strong>Automatic Appointment Confirmation and Reminders</strong>: Sends confirmation emails and appointment reminders.</li>
+                    <li><strong>Double-Check Attendance</strong>: Proactively checks in with patients before their appointments.</li>
+                </ul>
+
+                <h4 class="text-xl font-semibold mt-4 mb-2">Benefits:</h4>
+                <p class="text-lg text-gray-600">This solution improves efficiency, saves time, and enhances customer satisfaction by automating the entire appointment scheduling process.</p>
             `;
         } else if (projectId === 'project2') {
             content = `
-                <h3 class="text-3xl font-bold mb-4">Architecture Website</h3>
+                <h3 class="text-3xl font-bold mb-4">Responsive Website Development and Business Email Setup</h3>
                 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-80 object-cover mb-4" />
-                <p class="text-lg text-gray-600">A responsive website built for an architecture firm, highlighting their portfolio and services in a sleek, modern interface.</p>
+                <p class="text-lg text-gray-600">In this project, we designed and developed a fully responsive website for a client, while also setting up secure business email accounts. We performed extensive testing to ensure the website’s functionality across devices and browsers, and the email accounts were set up with the necessary configurations and security protocols.</p>
+
+                <h4 class="text-xl font-semibold mt-4 mb-2">Key Features:</h4>
+                <ul class="list-disc list-inside text-lg text-gray-600">
+                    <li><strong>Responsive Website Design</strong>: Mobile-first approach with seamless performance across devices.</li>
+                    <li><strong>Cross-Browser Compatibility</strong>: Ensured the website performed consistently across major web browsers.</li>
+                    <li><strong>Business Email Setup</strong>: Configured professional email accounts with forwarding, signatures, and security protocols.</li>
+                    <li><strong>Performance Testing</strong>: Conducted load and performance testing to ensure fast loading times and reliability.</li>
+                </ul>
+
+                <h4 class="text-xl font-semibold mt-4 mb-2">Benefits:</h4>
+                <p class="text-lg text-gray-600">This project not only provided a professional online presence for the client but also ensured seamless communication with business email integration and enhanced site performance.</p>
             `;
         } else if (projectId === 'project3') {
             content = `
-                <h3 class="text-3xl font-bold mb-4">UI/UX Exploration</h3>
+                <h3 class="text-3xl font-bold mb-4">AI-Powered Lead Follow-Up Automation for Real Estate Agents</h3>
                 <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-80 object-cover mb-4" />
-                <p class="text-lg text-gray-600">A mobile app design exploring new user interfaces to enhance productivity and user engagement.</p>
+                <p class="text-lg text-gray-600">This AI-driven automation helps real estate agents follow up with leads automatically. By leveraging AI to engage with leads via email, SMS, and phone, the system ensures timely follow-ups, personalized messages, and appointment scheduling, all without the need for manual intervention from agents.</p>
+
+                <h4 class="text-xl font-semibold mt-4 mb-2">Key Features:</h4>
+                <ul class="list-disc list-inside text-lg text-gray-600">
+                    <li><strong>Automated Lead Engagement</strong>: Interacts with leads via email, SMS, and phone calls, providing personalized follow-ups.</li>
+                    <li><strong>Smart Follow-Up Scheduling</strong>: Automatically schedules follow-up reminders and appointments based on lead engagement.</li>
+                    <li><strong>CRM Integration</strong>: Integrates with CRM systems to track and manage lead interactions in real time.</li>
+                    <li><strong>24/7 Availability</strong>: Ensures that no leads are missed by automating follow-ups around the clock.</li>
+                </ul>
+
+                <h4 class="text-xl font-semibold mt-4 mb-2">Benefits:</h4>
+                <p class="text-lg text-gray-600">By automating the follow-up process, this system allows real estate agents to focus on higher-priority tasks while increasing lead conversion rates and ensuring timely responses to potential clients.</p>
             `;
         }
 
@@ -578,6 +611,7 @@
         modal.classList.add('hidden');
     }
 </script>
+
 
 </body>
 </html>
