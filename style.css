@@ -96,10 +96,16 @@ p {
 /* Contact Info Section */
 #contact .space-y-6 div {
     margin-bottom: 20px;
+    text-align: center; /* Center align the text */
 }
 
 #contact .text-lg {
     font-size: 1.125rem;
+    text-align: center; /* Ensure this text is also centered */
+}
+
+#contact .mono {
+    text-align: center; /* Center align the labels as well */
 }
 
 /* Profile Picture Styling */
