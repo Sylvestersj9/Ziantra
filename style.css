@@ -114,7 +114,9 @@ p {
     height: 5rem; /* Adjust size */
     border-radius: 50%;  /* Makes the image circular */
     border: 4px solid #d1d5db;  /* Border styling */
+    margin-left: -10px; /* Move the image a little to the left */
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
