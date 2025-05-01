@@ -25,6 +25,62 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
+/* Grid and Flex Spacing Adjustments for Contact Section */
+#contact .grid {
+    gap: 4rem; /* This will increase the space between the contact form and contact info */
+}
+
+#contact .flex {
+    gap: 1.5rem; /* Adjusts space between social icons */
+}
+
+/* Increased size for social icons */
+#contact .w-12 {
+    width: 3rem; /* Increased size of social icons */
+    height: 3rem; /* Increased size of social icons */
+}
+
+/* Style for Contact Form */
+form input,
+form textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    border: 1px solid #d1d5db;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Style for Submit Button */
+form button {
+    padding: 1rem 2rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #333;
+}
+
+/* Card Styling */
+.card {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 16px;
+    border: 1px solid lightgray;
+    border-radius: 16px;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Heading and Text Styling */
 h1 {
     font-size: 16px;
     margin-top: 0;
@@ -37,14 +93,18 @@ p {
     margin-top: 5px;
 }
 
-.card {
-    max-width: 620px;
-    margin: 0 auto;
-    padding: 16px;
-    border: 1px solid lightgray;
-    border-radius: 16px;
+/* Contact Info Section */
+#contact .space-y-6 div {
+    margin-bottom: 20px;
 }
 
-.card p:last-child {
-    margin-bottom: 0;
+#contact .text-lg {
+    font-size: 1.125rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact .grid {
+        gap: 2rem;
+    }
 }
