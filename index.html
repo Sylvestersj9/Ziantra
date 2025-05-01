@@ -535,9 +535,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ziantra | Creative Portfolio</title>
-<!-- Add your other head elements, links to stylesheets, etc. -->
-</head>
-<body>
 <script>
     function openModal(projectId) {
         // Show the modal
@@ -608,8 +605,14 @@
         const modal = document.getElementById('modal');
         modal.classList.add('hidden');
     }
-</script>
 
+    // Close the modal if the user clicks outside of the modal content
+    document.getElementById('modal').addEventListener('click', function(event) {
+        if (event.target === this) {
+            closeModal();
+        }
+    });
+</script>
 
 </body>
 </html>
