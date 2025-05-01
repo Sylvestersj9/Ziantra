@@ -190,22 +190,6 @@
 
         <!-- Modal -->
         <div id="modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 hidden">
-            <div class="bg-white p-8 rounded-lg max-w-2xl w-full overflow-auto max-h-[80vh]">
-                <button onclick="closeModal()" class="text-black text-xl font-bold mb-4">X</button>
-                <div id="modal-content"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<div class="text-center mt-12">
-    <a href="#" class="px-8 py-3 border border-black rounded-sm font-medium text-sm mono hover:bg-gray-100 transition-all duration-300 inline-flex items-center hover-scale">
-        View Full Portfolio <i class="fas fa-arrow-right ml-2 text-xs"></i>
-    </a>
-</div>
-
-        <!-- Modal -->
-        <div id="modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 hidden">
             <div class="bg-white p-8 rounded-lg max-w-2xl w-full">
                 <button onclick="closeModal()" class="text-black text-xl font-bold mb-4">X</button>
                 <div id="modal-content"></div>
@@ -551,6 +535,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ziantra | Creative Portfolio</title>
+<!-- Add your other head elements, links to stylesheets, etc. -->
+</head>
+<body>
 <script>
     function openModal(projectId) {
         // Show the modal
@@ -621,8 +608,8 @@
         const modal = document.getElementById('modal');
         modal.classList.add('hidden');
     }
+</script>
 
-    // Close the modal if user clicks anywhere
 
 </body>
 </html>
