@@ -530,112 +530,44 @@
     <!-- Add your other head elements, links to stylesheets, etc. -->
 </head>
 <body>
-    <!-- Other sections of your website -->
-
-    <!-- Selected Projects (with Modal Popup) -->
-    <section id="work" class="py-20 px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 md:mb-0">Selected Projects</h2>
-                <div class="mono text-sm tracking-wider">RECENT WORK</div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <a href="javascript:void(0)" class="project-card group" onclick="openModal('project1')">
-                    <div class="overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 1" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start">
-                            <h3 class="text-xl font-bold mb-2">Minimal Brand Identity</h3>
-                            <span class="mono text-xs text-gray-500">2023</span>
-                        </div>
-                        <p class="text-gray-600 text-sm">Visual identity system for a modern furniture brand</p>
-                    </div>
-                </a>
-                
-                <!-- Project 2 -->
-                <a href="javascript:void(0)" class="project-card group" onclick="openModal('project2')">
-                    <div class="overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 2" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start">
-                            <h3 class="text-xl font-bold mb-2">Architecture Website</h3>
-                            <span class="mono text-xs text-gray-500">2023</span>
-                        </div>
-                        <p class="text-gray-600 text-sm">Digital experience for an architecture studio</p>
-                    </div>
-                </a>
-                
-                <!-- Project 3 -->
-                <a href="javascript:void(0)" class="project-card group" onclick="openModal('project3')">
-                    <div class="overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 3" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start">
-                            <h3 class="text-xl font-bold mb-2">UI/UX Exploration</h3>
-                            <span class="mono text-xs text-gray-500">2022</span>
-                        </div>
-                        <p class="text-gray-600 text-sm">Mobile app interface design for productivity</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Modal -->
-            <div id="modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 hidden">
-                <div class="bg-white p-8 rounded-lg max-w-2xl w-full">
-                    <button onclick="closeModal()" class="text-black text-xl font-bold mb-4">X</button>
-                    <div id="modal-content"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Other sections of your website -->
-
-    <!-- JavaScript for Modal Logic -->
-    <script>
-        function openModal(projectId) {
-            // Show the modal
-            const modal = document.getElementById('modal');
-            modal.classList.remove('hidden');
-            
-            // Set the content based on the project clicked
-            let content = '';
-            if (projectId === 'project1') {
-                content = `
-                    <h3 class="text-3xl font-bold mb-4">Minimal Brand Identity</h3>
-                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-80 object-cover mb-4" />
-                    <p class="text-lg text-gray-600">A visual identity system for a modern furniture brand, including logo design, brand guidelines, and product packaging.</p>
-                `;
-            } else if (projectId === 'project2') {
-                content = `
-                    <h3 class="text-3xl font-bold mb-4">Architecture Website</h3>
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-80 object-cover mb-4" />
-                    <p class="text-lg text-gray-600">A responsive website built for an architecture firm, highlighting their portfolio and services in a sleek, modern interface.</p>
-                `;
-            } else if (projectId === 'project3') {
-                content = `
-                    <h3 class="text-3xl font-bold mb-4">UI/UX Exploration</h3>
-                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-80 object-cover mb-4" />
-                    <p class="text-lg text-gray-600">A mobile app design exploring new user interfaces to enhance productivity and user engagement.</p>
-                `;
-            }
-
-            // Insert the content into the modal
-            document.getElementById('modal-content').innerHTML = content;
+<script>
+    function openModal(projectId) {
+        // Show the modal
+        const modal = document.getElementById('modal');
+        modal.classList.remove('hidden');
+        
+        // Set the content based on the project clicked
+        let content = '';
+        if (projectId === 'project1') {
+            content = `
+                <h3 class="text-3xl font-bold mb-4">Minimal Brand Identity</h3>
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-80 object-cover mb-4" />
+                <p class="text-lg text-gray-600">A visual identity system for a modern furniture brand, including logo design, brand guidelines, and product packaging.</p>
+            `;
+        } else if (projectId === 'project2') {
+            content = `
+                <h3 class="text-3xl font-bold mb-4">Architecture Website</h3>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-80 object-cover mb-4" />
+                <p class="text-lg text-gray-600">A responsive website built for an architecture firm, highlighting their portfolio and services in a sleek, modern interface.</p>
+            `;
+        } else if (projectId === 'project3') {
+            content = `
+                <h3 class="text-3xl font-bold mb-4">UI/UX Exploration</h3>
+                <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-80 object-cover mb-4" />
+                <p class="text-lg text-gray-600">A mobile app design exploring new user interfaces to enhance productivity and user engagement.</p>
+            `;
         }
 
-        function closeModal() {
-            // Hide the modal
-            const modal = document.getElementById('modal');
-            modal.classList.add('hidden');
-        }
-    </script>
-</body>
-</html>
+        // Insert the content into the modal
+        document.getElementById('modal-content').innerHTML = content;
+    }
+
+    function closeModal() {
+        // Hide the modal
+        const modal = document.getElementById('modal');
+        modal.classList.add('hidden');
+    }
+</script>
+
 </body>
 </html>
