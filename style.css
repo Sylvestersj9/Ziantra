@@ -5,16 +5,16 @@ body {
 
 /* Modal Content Styling */
 #modal-content {
-    max-height: 60vh; /* Further reduces the height of the modal content */
+    max-height: 75vh; /* Slightly increased the height of the modal content */
     overflow-y: auto; /* Allows scrolling inside the modal */
     padding-right: 15px; /* Prevents scrollbar from overlapping content */
 }
 
 /* Modal Styling */
 #modal {
-    max-width: 500px; /* Further decreased the width of the modal */
-    width: 90%; /* Still keeps it responsive at 90% of the available width */
-    max-height: 70vh; /* Further reduces the modal height */
+    max-width: 600px; /* Increased the width of the modal */
+    width: 90%; /* Makes the modal responsive by taking 90% of the screen width */
+    max-height: 75vh; /* Ensures the modal doesn't exceed 75% of the screen height */
     overflow-y: auto; /* Enables scroll within the modal */
     margin: 0 auto; /* Centers the modal horizontally */
 }
