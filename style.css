@@ -114,8 +114,16 @@ p {
     height: 5rem; /* Adjust size */
     border-radius: 50%;  /* Makes the image circular */
     border: 4px solid #d1d5db;  /* Border styling */
-    transform: translateX(-10px); /* Move the image 10px to the left */
+    margin-left: -15px; /* Move the image a little to the left */
 }
+
+/* Ensure the parent flex container is aligned properly */
+#contact .flex {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align items to the start vertically */
+}
+
 
 
 
