@@ -270,74 +270,75 @@
 </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-8">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Create Together</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Interested in working together? I'd love to hear about your project.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <form class="space-y-6">
-                        <div>
-                            <label for="name" class="mono text-sm block mb-2">YOUR NAME</label>
-                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-black transition">
-                        </div>
-                        <div>
-                            <label for="email" class="mono text-sm block mb-2">EMAIL ADDRESS</label>
-                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-black transition">
-                        </div>
-                        <div>
-                            <label for="message" class="mono text-sm block mb-2">YOUR MESSAGE</label>
-                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-black transition"></textarea>
-                        </div>
-                        <button type="submit" class="px-8 py-4 bg-black text-white rounded-sm font-medium text-sm mono hover:bg-gray-800 transition-all duration-300 w-full hover-scale">
-                            SEND MESSAGE
-                        </button>
-                    </form>
-                </div>
-                <div class="flex flex-col justify-between">
+    <<section id="contact" class="py-20 px-8">
+    <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Create Together</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Interested in working together? I'd love to hear about your project.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <form action="send-email.php" method="POST" class="space-y-6">
                     <div>
-                        <h3 class="mono text-sm mb-6">CONTACT INFO</h3>
-                        <div class="space-y-6">
-                            <div>
-                                <div class="mono text-xs text-gray-500 mb-1">EMAIL</div>
-                                <div class="text-lg">sylvester@ziantra.co.uk</div>
-                            </div>
-                            <div>
-                                <div class="mono text-xs text-gray-500 mb-1">PHONE</div>
-                                <div class="text-lg">+44 07448805234</div>
-                            </div>
-                            <div>
-                                <div class="mono text-xs text-gray-500 mb-1">BASED IN</div>
-                                <div class="text-lg">London, England</div>
-                            </div>
+                        <label for="name" class="mono text-sm block mb-2">YOUR NAME</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-black transition" required>
+                    </div>
+                    <div>
+                        <label for="email" class="mono text-sm block mb-2">EMAIL ADDRESS</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-black transition" required>
+                    </div>
+                    <div>
+                        <label for="message" class="mono text-sm block mb-2">YOUR MESSAGE</label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-black transition" required></textarea>
+                    </div>
+                    <button type="submit" class="px-8 py-4 bg-black text-white rounded-sm font-medium text-sm mono hover:bg-gray-800 transition-all duration-300 w-full hover-scale">
+                        SEND MESSAGE
+                    </button>
+                </form>
+            </div>
+            <div class="flex flex-col justify-between">
+                <div>
+                    <h3 class="mono text-sm mb-6">CONTACT INFO</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="mono text-xs text-gray-500 mb-1">EMAIL</div>
+                            <div class="text-lg">sylvester@ziantra.co.uk</div>
+                        </div>
+                        <div>
+                            <div class="mono text-xs text-gray-500 mb-1">PHONE</div>
+                            <div class="text-lg">+44 07448805234</div>
+                        </div>
+                        <div>
+                            <div class="mono text-xs text-gray-500 mb-1">BASED IN</div>
+                            <div class="text-lg">London, England</div>
                         </div>
                     </div>
-                    <div class="mt-8">
-                        <h3 class="mono text-sm mb-6">SOCIAL</h3>
-                        <div class="flex space-x-4">
-                            <a href="mailto:sylvester@ziantra.co.uk" class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all duration-300">
-        <i class="fas fa-envelope text-sm"></i> <!-- Email Icon -->
-    </a>
-                            <a href="#" class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all duration-300">
-                                <i class="fab fa-facebook text-sm"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all duration-300">
-                                <i class="fab fa-instagram text-sm"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all duration-300">
-                                <i class="fab fa-linkedin-in text-sm"></i>
-                            </a>
-                        </div>
+                </div>
+                <div class="mt-8">
+                    <h3 class="mono text-sm mb-6">SOCIAL</h3>
+                    <div class="flex space-x-4">
+                        <a href="mailto:sylvester@ziantra.co.uk" class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all duration-300">
+                            <i class="fas fa-envelope text-sm"></i> <!-- Email Icon -->
+                        </a>
+                        <a href="#" class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all duration-300">
+                            <i class="fab fa-facebook text-sm"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all duration-300">
+                            <i class="fab fa-instagram text-sm"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all duration-300">
+                            <i class="fab fa-linkedin-in text-sm"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
     
     <!-- Footer -->
     <footer class="py-12 px-8 border-t border-gray-200">
