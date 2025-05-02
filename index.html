@@ -283,7 +283,7 @@
     </div>
 </section>
 <!-- Button to open the modal -->
-<div class="text-center">
+<div class="text-center mt-8">
     <button onclick="openModal()" class="px-6 py-3 bg-black text-white rounded-sm font-medium text-sm hover:bg-gray-800 transition-all duration-300">
         Click here to see how it works
     </button>
@@ -302,13 +302,16 @@
 <!-- Script to open and close the modal -->
 <script>
     function openModal() {
+        // Make the modal visible by removing the 'hidden' class
         document.getElementById('video-modal').classList.remove('hidden');
     }
 
     function closeModal() {
+        // Hide the modal by adding the 'hidden' class
         document.getElementById('video-modal').classList.add('hidden');
     }
 </script>
+
 
 
 <!-- Apps Integration Section -->
