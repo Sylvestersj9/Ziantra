@@ -292,26 +292,9 @@
 <!-- Modal -->
 <div id="video-modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 hidden">
     <div class="bg-white p-8 rounded-lg max-w-2xl w-full">
+        <!-- Close Button -->
         <button onclick="closeModal()" class="text-black text-xl font-bold mb-4">X</button>
-        <div class="w-full">
-            <!-- YouTube Video -->
-            <iframe width="100%" height="400" src="https://www.youtube.com/embed/_HFouU4qo_8?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </div>
-</div>
-
-<!-- Script to handle modal open and close -->
-<script>
-    // Open the modal
-    function openModal() {
-        document.getElementById('video-modal').classList.remove('hidden'); // Show the modal
-    }
-
-    // Close the modal
-    function closeModal() {
-        document.getElementById('video-modal').classList.add('hidden'); // Hide the modal
-    }
-</script>
+       
 
 
 
