@@ -294,21 +294,22 @@
     <div class="bg-white p-8 rounded-lg max-w-2xl w-full">
         <button onclick="closeModal()" class="text-black text-xl font-bold mb-4">X</button>
         <div class="w-full">
-            <iframe width="100%" height="400" src="https://www.youtube.com/embed/_HFouU4qo_8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- YouTube Video -->
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/_HFouU4qo_8?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 </div>
 
-<!-- Script to open and close the modal -->
+<!-- Script to handle modal open and close -->
 <script>
+    // Open the modal
     function openModal() {
-        // Make the modal visible by removing the 'hidden' class
-        document.getElementById('video-modal').classList.remove('hidden');
+        document.getElementById('video-modal').classList.remove('hidden'); // Show the modal
     }
 
+    // Close the modal
     function closeModal() {
-        // Hide the modal by adding the 'hidden' class
-        document.getElementById('video-modal').classList.add('hidden');
+        document.getElementById('video-modal').classList.add('hidden'); // Hide the modal
     }
 </script>
 
