@@ -124,6 +124,48 @@ p {
     align-items: flex-start; /* Align items to the start vertically */
 }
 
+/* Tech Stack Section */
+#tech-stack h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #333;
+}
+
+#tech-stack .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Default grid with 2 columns */
+    gap: 2rem; /* Space between items */
+}
+
+#tech-stack img {
+    width: 4rem; /* Set width for logos */
+    height: 4rem; /* Set height for logos */
+    object-fit: contain; /* Ensure logos scale properly */
+    transition: transform 0.3s ease;
+}
+
+#tech-stack img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Responsive grid layout */
+@media (min-width: 640px) {
+    #tech-stack .grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for small screens */
+    }
+}
+
+@media (min-width: 768px) {
+    #tech-stack .grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    #tech-stack .grid {
+        grid-template-columns: repeat(6, 1fr); /* 6 columns for large screens */
+    }
+}
 
 
 
