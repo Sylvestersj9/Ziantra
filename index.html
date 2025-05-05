@@ -442,6 +442,10 @@
     <input type="hidden" name="_subject" value="New contact form message from Ziantra site">
           <button type="submit" class="px-8 py-4 bg-black text-white rounded-sm font-medium text-sm mono hover:bg-gray-800 transition-all duration-300 w-full hover-scale">SEND MESSAGE</button>
         </form>
+<div id="form-notification" class="hidden fixed bottom-6 right-6 bg-black text-white text-sm px-6 py-4 rounded shadow-lg z-50 transition-opacity duration-500 opacity-0">
+  ✅ Thank you for contacting Ziantra. We'll aim to get back to you within 24 hours.
+</div>
+
       </div>
       <div class="flex flex-col justify-start items-center">
         <div class="flex justify-center mb-6">
@@ -740,10 +744,11 @@
     });
 </script>
 <script>
-  document.getElementById("contact-form").addEventListener("submit", async function(e) {
-    e.preventDefault();
+  const form = document.getElementById("contact-form");
+  const notification = document.getElementById("form-notification");
 
-    const form = e.target;
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
     const formData = new FormData(form);
 
     try {
@@ -754,15 +759,30 @@
       });
 
       if (response.ok) {
-        alert("✅ Thank you for contacting Ziantra. We'll aim to get back to you within 24 hours.");
         form.reset();
+        showNotification("✅ Thank you for contacting Ziantra. We'll aim to get back to you within 24 hours.");
       } else {
-        alert("❌ Oops! Something went wrong. Please try again or email sylvester@ziantra.co.uk directly.");
+        showNotification("❌ Something went wrong. Please try again or email sylvester@ziantra.co.uk directly.");
       }
     } catch (error) {
-      alert("❌ Network error. Please check your connection and try again.");
+      showNotification("❌ Network error. Please check your connection and try again.");
     }
   });
+
+  function showNotification(message) {
+    notification.textContent = message;
+    notification.classList.remove("hidden");
+    notification.classList.add("opacity-100");
+
+    setTimeout(() => {
+      notification.classList.remove("opacity-100");
+      notification.classList.add("opacity-0");
+      setTimeout(() => {
+        notification.classList.add("hidden");
+      }, 500);
+    }, 4000); // Display for 4 seconds
+  }
 </script>
+
 </body>
 </html>
