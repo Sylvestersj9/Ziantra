@@ -482,6 +482,66 @@
     </div>
   </div>
 </section>
+      <!-- FAQ SECTION  -->
+
+<section id="faq" class="py-20 px-8 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="mb-12 text-left md:text-center">
+      <h2 class="text-3xl md:text-4xl font-bold">Common <em class="italic">Questions</em></h2>
+      <p class="text-sm text-gray-500 mt-4 max-w-xl">Here are some of the most asked questions about automation and how Ziantra can help. Still have questions? Drop us a message.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- QUESTION 1 -->
+      <div>
+        <button onclick="toggleFAQ(this)" class="text-left w-full font-semibold text-lg mb-2">What is AI Automation?</button>
+        <p class="faq-answer hidden text-sm text-gray-700">AI automation uses artificial intelligence to automate repetitive, manual, or time-consuming tasks — like email responses, booking systems, or lead capture — so you can focus on high-impact work.</p>
+      </div>
+
+      <!-- QUESTION 2 -->
+      <div>
+        <button onclick="toggleFAQ(this)" class="text-left w-full font-semibold text-lg mb-2">How Can Ziantra Help Me?</button>
+        <p class="faq-answer hidden text-sm text-gray-700">Whether you’re a freelancer, business owner, or team leader, Ziantra builds automations tailored to your needs — from simple task reminders to full AI-driven workflows integrated with your tools.</p>
+      </div>
+
+      <!-- QUESTION 3 -->
+      <div>
+        <button onclick="toggleFAQ(this)" class="text-left w-full font-semibold text-lg mb-2">Do I Need To Know Anything Technical?</button>
+        <p class="faq-answer hidden text-sm text-gray-700">Not at all. We handle everything. You tell us what you want automated — we scope, build, and maintain it. You just get the results.</p>
+      </div>
+
+      <!-- QUESTION 4 -->
+      <div>
+        <button onclick="toggleFAQ(this)" class="text-left w-full font-semibold text-lg mb-2">Can I Start Small Without a Full Plan?</button>
+        <p class="faq-answer hidden text-sm text-gray-700">Yes — you can request a single custom automation starting at just £25/month. No need to commit to a full package right away.</p>
+      </div>
+
+      <!-- QUESTION 5 -->
+      <div>
+        <button onclick="toggleFAQ(this)" class="text-left w-full font-semibold text-lg mb-2">What Tools Can You Integrate With?</button>
+        <p class="faq-answer hidden text-sm text-gray-700">We work with tools like Gmail, Notion, Trello, Slack, Calendly, Shopify, Google Sheets, and hundreds more via API or automation platforms like Make.com and Zapier.</p>
+      </div>
+
+      <!-- QUESTION 6 -->
+      <div>
+        <button onclick="toggleFAQ(this)" class="text-left w-full font-semibold text-lg mb-2">How Long Does Setup Take?</button>
+        <p class="faq-answer hidden text-sm text-gray-700">Most basic automations are delivered within 2–4 business days. Larger workflows may take longer based on complexity. You’ll always get a clear timeline before we start.</p>
+      </div>
+
+      <!-- QUESTION 7 -->
+      <div>
+        <button onclick="toggleFAQ(this)" class="text-left w-full font-semibold text-lg mb-2">Is There a Contract or Commitment?</button>
+        <p class="faq-answer hidden text-sm text-gray-700">No contracts. You can cancel or downgrade any time. We work on a flexible month-to-month basis.</p>
+      </div>
+
+      <!-- QUESTION 8 -->
+      <div>
+        <button onclick="toggleFAQ(this)" class="text-left w-full font-semibold text-lg mb-2">What If I Want Something Outside The Plans?</button>
+        <p class="faq-answer hidden text-sm text-gray-700">No problem — just get in touch and tell us what you need. We can quote you for one-off projects or build custom solutions outside the predefined packages.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer class="py-12 px-8 border-t border-gray-200">
@@ -781,6 +841,20 @@
         notification.classList.add("hidden");
       }, 500);
     }, 4000); // Display for 4 seconds
+  }
+</script>
+<script>
+  function toggleFAQ(button) {
+    const answer = button.nextElementSibling;
+    const isOpen = !answer.classList.contains("hidden");
+
+    document.querySelectorAll(".faq-answer").forEach(p => {
+      p.classList.add("hidden");
+    });
+
+    if (!isOpen) {
+      answer.classList.remove("hidden");
+    }
   }
 </script>
 
