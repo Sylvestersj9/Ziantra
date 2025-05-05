@@ -849,15 +849,20 @@
 </script>
 <script>
   function toggleFAQ(button) {
-    const answer = button.nextElementSibling;
-    const isOpen = !answer.classList.contains("hidden");
+    const allAnswers = document.querySelectorAll(".faq-answer");
 
-    document.querySelectorAll(".faq-answer").forEach(p => {
-      p.classList.add("hidden");
+    allAnswers.forEach(answer => {
+      if (answer !== button.nextElementSibling) {
+        answer.style.maxHeight = null;
+      }
     });
 
-    if (!isOpen) {
-      answer.classList.remove("hidden");
+    const content = button.nextElementSibling;
+
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
     }
   }
 </script>
