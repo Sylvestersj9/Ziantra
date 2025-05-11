@@ -1006,7 +1006,7 @@
     </div>
     <div class="space-y-6 text-left">
 
-      <!-- Example Category Block -->
+      <!-- Inbox & Email Automation -->
       <div>
         <h3 class="text-xl font-bold mb-2">📧 Inbox & Email Automation</h3>
         <p class="text-gray-600 mb-4">Streamline your email workflows and stay on top of communication effortlessly.</p>
@@ -1017,7 +1017,95 @@
         </ul>
       </div>
 
-      <!-- Repeat Blocks For Other Categories Here -->
+      <!-- Calendar & Appointment Automation -->
+      <div>
+        <h3 class="text-xl font-bold mb-2">📅 Calendar & Appointment Automation</h3>
+        <ul class="list-disc pl-5 text-gray-600 space-y-2">
+          <li><strong>AI Calendar Scheduling Assistant:</strong> Manage bookings and prevent double-booking automatically.</li>
+          <li><strong>Auto-Booking & Follow-Up with Cal.com:</strong> Seamless client booking with automated follow-ups.</li>
+          <li><strong>Meeting Summary Generator:</strong> Instantly generate notes and action items after every meeting.</li>
+        </ul>
+      </div>
+
+      <!-- Customer Engagement Automation -->
+      <div>
+        <h3 class="text-xl font-bold mb-2">💬 Customer Engagement (WhatsApp & Telegram Bots)</h3>
+        <ul class="list-disc pl-5 text-gray-600 space-y-2">
+          <li><strong>WhatsApp AI Auto-Responder:</strong> Handle client inquiries with instant AI-generated replies.</li>
+          <li><strong>Telegram AI Assistant with Memory:</strong> Support customers on Telegram with ongoing context awareness.</li>
+          <li><strong>Children’s Storytelling Bots:</strong> Engage kids with AI-powered storytelling on Telegram in English or Arabic.</li>
+        </ul>
+      </div>
+
+      <!-- Social Media Automation -->
+      <div>
+        <h3 class="text-xl font-bold mb-2">📱 Social Media Automation</h3>
+        <ul class="list-disc pl-5 text-gray-600 space-y-2">
+          <li><strong>AI Social Media Post Generator:</strong> Automatically create engaging posts and captions.</li>
+          <li><strong>Auto-Post YouTube to Twitter/X:</strong> Share your latest videos to social media without lifting a finger.</li>
+          <li><strong>LinkedIn Outreach Automation:</strong> Connect with potential leads through personalized AI messaging.</li>
+        </ul>
+      </div>
+
+      <!-- Business Process Automation -->
+      <div>
+        <h3 class="text-xl font-bold mb-2">📊 Business Process Automation (Google Sheets, Airtable, Notion)</h3>
+        <ul class="list-disc pl-5 text-gray-600 space-y-2">
+          <li><strong>Google Sheets Data Manager:</strong> Auto-update spreadsheets with customer data or leads.</li>
+          <li><strong>Airtable AI Data Analysis Agent:</strong> Analyze and interact with your Airtable data via AI.</li>
+          <li><strong>Notion Task Manager Assistant:</strong> Automate task tracking and team collaboration in Notion.</li>
+        </ul>
+      </div>
+
+      <!-- E-Commerce & Customer Service -->
+      <div>
+        <h3 class="text-xl font-bold mb-2">🛒 E-Commerce & Customer Service</h3>
+        <ul class="list-disc pl-5 text-gray-600 space-y-2">
+          <li><strong>WooCommerce Customer Chatbot:</strong> Handle customer inquiries and order updates automatically.</li>
+          <li><strong>Automated Order Notifications:</strong> Keep your customers informed at every order stage.</li>
+        </ul>
+      </div>
+
+      <!-- Research & Content Automation -->
+      <div>
+        <h3 class="text-xl font-bold mb-2">📚 Research & Content Automation</h3>
+        <ul class="list-disc pl-5 text-gray-600 space-y-2">
+          <li><strong>AI Market Research Agent:</strong> Scrape and summarize market data for strategic insights.</li>
+          <li><strong>Blog Post Generator:</strong> Create fully optimized blog posts based on your keywords.</li>
+          <li><strong>Video & Podcast Summary Tools:</strong> Turn long content into digestible highlights for your audience.</li>
+        </ul>
+      </div>
+
+      <!-- Closing Block -->
+      <div>
+        <h3 class="text-xl font-bold mb-2">🆕 More Coming Soon</h3>
+        <p class="text-gray-600">We’re continuously adding new solutions. Have something in mind? <a href="#contact" onclick="closeAutomationsModal()" class="underline text-black">Contact us</a>
+ and let’s make it happen.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Automations Modal Script -->
+<script>
+  function openAutomationsModal() {
+    document.getElementById('automations-modal').classList.remove('hidden');
+  }
+
+  function closeAutomationsModal() {
+    document.getElementById('automations-modal').classList.add('hidden');
+  }
+
+  // Close modal when clicking outside of modal content
+  document.addEventListener('click', function(event) {
+    const modal = document.getElementById('automations-modal');
+    if (!modal.classList.contains('hidden') && event.target === modal) {
+      closeAutomationsModal();
+    }
+  });
+</script>
+
       <!-- Calendar, WhatsApp, Social Media, Business Automation, etc. -->
 
       <div>
