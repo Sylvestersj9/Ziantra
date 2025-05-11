@@ -1,12 +1,9 @@
 ---
-title: zozos
-emoji: 🐳
+title: Ziantra
 colorFrom: gray
 colorTo: gray
 sdk: static
 pinned: false
-tags:
-  - deepsite
+tags: AI Automation Agency
 ---
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
