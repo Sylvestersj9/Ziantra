@@ -206,6 +206,12 @@
 
 
   <!-- New content for Carehome automations -->
+<!-- Care Sector Offer Button -->
+<div class="text-center mt-4">
+  <button onclick="openCareSectorModal()" class="px-6 py-3 border border-black rounded-sm font-medium text-sm mono hover:bg-gray-100 transition-all duration-300 inline-flex items-center hover-scale">
+    Exclusive £20 Offer for Care Staff
+  </button>
+</div>
 
 
     
@@ -1130,6 +1136,98 @@
     const modal = document.getElementById('automations-modal');
     if (!modal.classList.contains('hidden') && event.target === modal) {
       closeAutomationsModal();
+    }
+  });
+</script>
+<!-- Care Sector Discount Modal -->
+<div id="care-sector-modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 hidden">
+  <div class="bg-white p-8 rounded-lg max-w-5xl w-full overflow-y-auto max-h-[90vh]">
+    <button onclick="closeCareSectorModal()" class="text-black text-xl font-bold mb-4">X</button>
+    <div class="w-full text-center mb-6">
+      <h2 class="text-3xl font-bold mb-2">🚨 Special Offer for Care Home Professionals</h2>
+      <p class="text-gray-600 mb-4 max-w-3xl mx-auto">
+        For Homes Managers, Care Staff, and Support Workers across the UK.  
+        <strong>Spend less time on admin. Spend more time with your young people.</strong>
+      </p>
+      <p class="text-red-600 font-bold text-lg mb-4 line-through">Usually £75/month</p>
+      <p class="text-2xl font-bold text-green-700 mb-8">Now Just £20/month — For a Limited Time</p>
+    </div>
+
+    <div class="space-y-6 text-left">
+
+      <!-- Personal Story -->
+      <div class="text-center mb-8">
+        <h3 class="text-xl font-bold mb-2">Why I Created This</h3>
+        <p class="text-gray-600 max-w-3xl mx-auto">
+          I’ve been where you are — spending late nights in front of the computer, trying to get ready for Ofsted,
+          sorting endless emails, and preparing paperwork while knowing you should be **spending time with the young people** you’re there to support.
+          <br><br>
+          That’s why I built these automations — to **give you your time back**, cut down screen time, and help you **stay ahead of Ofsted** effortlessly.
+        </p>
+      </div>
+
+      <!-- Two Side-by-Side Automations -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- Automation 1 -->
+        <div class="border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition">
+          <h3 class="text-xl font-bold mb-4">📧 AI Email Organiser for Care Teams</h3>
+          <ul class="list-disc pl-5 text-gray-600 space-y-2">
+            <li>Auto-label and organize all your incoming emails.</li>
+            <li>Draft responses to key messages based on your team’s instructions.</li>
+            <li>Reduce clutter and make inbox management effortless.</li>
+            <li>AI trained on your company’s email patterns and needs.</li>
+          </ul>
+        </div>
+
+        <!-- Automation 2 -->
+        <div class="border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition">
+          <h3 class="text-xl font-bold mb-4">🛡️ Ofsted & Policy Compliance AI Assistant</h3>
+          <ul class="list-disc pl-5 text-gray-600 space-y-2">
+            <li>Instantly answers questions about your company’s policies & procedures.</li>
+            <li>Fetches Ofsted compliance info, risk assessments, safeguarding, and more.</li>
+            <li>Provides summaries or allows staff to chat back and forth with AI for clarity.</li>
+            <li>Always up-to-date with your company documents and Ofsted regulations.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Benefits -->
+      <div class="text-center mt-8">
+        <h3 class="text-xl font-bold mb-4">Here’s What You Get — All for Just £20/Month</h3>
+        <ul class="list-disc pl-5 text-gray-600 space-y-2 max-w-2xl mx-auto text-left">
+          <li>✅ Slash your admin time with AI-powered tools.</li>
+          <li>✅ Stay Ofsted-ready 24/7 with instant policy answers.</li>
+          <li>✅ Free up your staff to focus on real care work, not paperwork.</li>
+        </ul>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="text-center mt-8">
+        <a href="#contact" onclick="closeCareSectorModal()" class="px-8 py-4 bg-black text-white rounded-sm font-medium text-lg hover:bg-gray-800 transition-all duration-300">
+          Claim This £20 Offer Now
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  function openCareSectorModal() {
+    document.getElementById('care-sector-modal').classList.remove('hidden');
+  }
+
+  function closeCareSectorModal() {
+    document.getElementById('care-sector-modal').classList.add('hidden');
+  }
+
+  // Close on outside click
+  document.addEventListener('click', function(event) {
+    const modal = document.getElementById('care-sector-modal');
+    if (!modal.classList.contains('hidden') && event.target === modal) {
+      closeCareSectorModal();
     }
   });
 </script>
