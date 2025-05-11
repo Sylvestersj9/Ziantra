@@ -289,10 +289,11 @@
 </section>
 <!-- Button to open the modal -->
 <div class="text-center mt-8">
-    <button onclick="openModal()" class="px-6 py-3 bg-black text-white rounded-sm font-medium text-sm hover:bg-gray-800 transition-all duration-300">
+    <button onclick="openVideoModal()" class="px-6 py-3 bg-black text-white rounded-sm font-medium text-sm hover:bg-gray-800 transition-all duration-300">
         Click here to see how it works
     </button>
 </div>
+
 
 <!-- Modal -->
 <div id="video-modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 hidden">
@@ -935,6 +936,15 @@
       content.style.maxHeight = content.scrollHeight + "px";
       icon.textContent = "–";
     }
+  }
+</script>
+<script>
+  function openVideoModal() {
+    document.getElementById('video-modal').classList.remove('hidden');
+  }
+
+  function closeModal() {
+    document.getElementById('video-modal').classList.add('hidden');
   }
 </script>
 
