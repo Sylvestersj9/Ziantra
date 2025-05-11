@@ -198,12 +198,12 @@
 </div>
 
 <div class="text-center mt-12 mb-12">
-    <a href="https://ziantra.carrd.co/" 
-       class="px-8 py-3 border border-black rounded-sm font-medium text-sm mono hover:bg-gray-100 transition-all duration-300 inline-flex items-center hover-scale" 
-       target="_blank">
-        View Full Portfolio <i class="fas fa-arrow-right ml-2 text-xs"></i>
-    </a>
+  <button onclick="openAutomationsModal()" 
+          class="px-8 py-3 border border-black rounded-sm font-medium text-sm mono hover:bg-gray-100 transition-all duration-300 inline-flex items-center hover-scale">
+    View All Automations <i class="fas fa-arrow-right ml-2 text-xs"></i>
+  </button>
 </div>
+
 
   <!-- New content for Carehome automations -->
 
@@ -993,6 +993,55 @@
     const modal = document.getElementById('video-modal');
     if (!modal.classList.contains('hidden') && event.target === modal) {
       closeModal();
+    }
+  });
+</script>
+<!-- Automations Modal -->
+<div id="automations-modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 hidden">
+  <div class="bg-white p-8 rounded-lg max-w-3xl w-full overflow-y-auto max-h-[90vh]">
+    <button onclick="closeAutomationsModal()" class="text-black text-xl font-bold mb-4">X</button>
+    <div class="w-full text-center mb-6">
+      <h2 class="text-2xl font-bold mb-2">Our Automation Services</h2>
+      <p class="text-gray-600 mb-4">Explore the range of automations Ziantra offers to streamline your business processes.</p>
+    </div>
+    <div class="space-y-6 text-left">
+
+      <!-- Example Category Block -->
+      <div>
+        <h3 class="text-xl font-bold mb-2">📧 Inbox & Email Automation</h3>
+        <p class="text-gray-600 mb-4">Streamline your email workflows and stay on top of communication effortlessly.</p>
+        <ul class="list-disc pl-5 text-gray-600 space-y-2">
+          <li><strong>Smart Gmail Inbox Organizer:</strong> Auto-label emails for a cleaner, more manageable inbox.</li>
+          <li><strong>AI-Powered Email Summarizer & Replies:</strong> Summarize and draft responses to save time.</li>
+          <li><strong>Outlook Email Organizer with AI:</strong> Automate sorting and categorizing of incoming emails.</li>
+        </ul>
+      </div>
+
+      <!-- Repeat Blocks For Other Categories Here -->
+      <!-- Calendar, WhatsApp, Social Media, Business Automation, etc. -->
+
+      <div>
+        <h3 class="text-xl font-bold mb-2">🆕 More Coming Soon</h3>
+        <p class="text-gray-600">We’re continuously adding new solutions. Have something in mind? <a href="#contact" class="underline text-black">Contact us</a> and let’s make it happen.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script>
+  function openAutomationsModal() {
+    document.getElementById('automations-modal').classList.remove('hidden');
+  }
+
+  function closeAutomationsModal() {
+    document.getElementById('automations-modal').classList.add('hidden');
+  }
+
+  // Allow closing by clicking outside
+  document.addEventListener('click', function(event) {
+    const modal = document.getElementById('automations-modal');
+    if (!modal.classList.contains('hidden') && event.target === modal) {
+      closeAutomationsModal();
     }
   });
 </script>
