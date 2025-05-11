@@ -325,7 +325,7 @@
     </div>
 
     <!-- Embedded Video Auto-Play Loop -->
-    <div class="w-full">
+    <div class="w-full mb-8">
       <iframe width="100%" height="400" 
         src="https://www.youtube.com/embed/_HFouU4qo_8?autoplay=1&mute=1&loop=1&playlist=_HFouU4qo_8" 
         frameborder="0" 
@@ -333,9 +333,15 @@
         allowfullscreen>
       </iframe>
     </div>
+
+    <!-- CTA Button -->
+    <div class="text-center">
+      <a href="#contact" class="px-6 py-3 bg-black text-white rounded-sm font-medium text-sm hover:bg-gray-800 transition-all duration-300">
+        Let’s Get Started
+      </a>
+    </div>
   </div>
 </div>
-
 
 
 <!-- Script to handle modal open and close -->
@@ -972,6 +978,23 @@
   function closeModal() {
     document.getElementById('video-modal').classList.add('hidden');
   }
+</script>
+<script>
+  function openVideoModal() {
+    document.getElementById('video-modal').classList.remove('hidden');
+  }
+
+  function closeModal() {
+    document.getElementById('video-modal').classList.add('hidden');
+  }
+
+  // Close modal when clicking outside of modal content
+  document.addEventListener('click', function(event) {
+    const modal = document.getElementById('video-modal');
+    if (!modal.classList.contains('hidden') && event.target === modal) {
+      closeModal();
+    }
+  });
 </script>
 
 </body>
