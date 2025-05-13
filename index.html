@@ -484,18 +484,18 @@
   </div>
 </section>
 
-<!-- CONTACT SECTION -->
 <section id="contact" class="py-20 px-8">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-16">
       <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Create Together</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">Interested in working together? I'd love to hear about your project.</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-      <div>
-<form id="contact-form" action="https://formspree.io/f/meoggzve" method="POST" class="space-y-6">
-<input type="hidden" name="_subject" value="New message from your website">
-
+    <div class="flex flex-col md:flex-row gap-16 items-start">
+      
+      <!-- Contact Form -->
+      <div class="w-full md:w-1/2">
+        <form id="contact-form" action="https://formspree.io/f/meoggzve" method="POST" class="space-y-6">
+          <input type="hidden" name="_subject" value="New message from your website">
           <div>
             <label for="name" class="mono text-sm block mb-2">YOUR NAME</label>
             <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-black transition" required>
@@ -508,31 +508,37 @@
             <label for="message" class="mono text-sm block mb-2">YOUR MESSAGE</label>
             <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-black transition" required></textarea>
           </div>
-    <input type="hidden" name="_subject" value="New contact form message from Ziantra site">
+          <input type="hidden" name="_subject" value="New contact form message from Ziantra site">
           <button type="submit" class="px-8 py-4 bg-black text-white rounded-sm font-medium text-sm mono hover:bg-gray-800 transition-all duration-300 w-full hover-scale">SEND MESSAGE</button>
         </form>
-<div id="form-notification" class="hidden fixed bottom-6 right-6 bg-black text-white text-sm px-6 py-4 rounded shadow-lg z-50 transition-opacity duration-500 opacity-0">
-  ✅ Thank you for contacting Ziantra. We'll aim to get back to you within 24 hours.
-</div>
-<div class="flex flex-col justify-start items-center">
-  <img src="https://i.imgur.com/u7jZLD4.jpeg" alt="Profile Picture" class="w-20 h-20 rounded-full border-4 border-gray-300 mb-6">
-  <div class="text-center">
-    <h3 class="mono text-sm mb-6">CONTACT INFO</h3>
-    <div class="space-y-6">
-      <div>
-        <div class="mono text-xs text-gray-500 mb-1">EMAIL</div>
-        <div class="text-lg">sylvester@ziantra.co.uk</div>
+
+        <div id="form-notification" class="hidden fixed bottom-6 right-6 bg-black text-white text-sm px-6 py-4 rounded shadow-lg z-50 transition-opacity duration-500 opacity-0">
+          ✅ Thank you for contacting Ziantra. We'll aim to get back to you within 24 hours.
+        </div>
       </div>
-      <div>
-        <div class="mono text-xs text-gray-500 mb-1">PHONE</div>
-        <div class="text-lg">+44 07448805234</div>
-      </div>
-      <div>
-        <div class="mono text-xs text-gray-500 mb-1">BASED IN</div>
-        <div class="text-lg">London, England</div>
-      </div>
-    </div>
-  </div>
+
+      <!-- Contact Info -->
+      <div class="w-full md:w-1/2 flex flex-col justify-start items-center">
+        <div class="flex justify-center mb-6">
+          <img src="https://i.postimg.cc/CLcpW8QJ/Whats-App-Image-2025-05-05-at-20-50-01-46180ff4.jpg" alt="Profile Picture" class="w-20 h-20 rounded-full border-4 border-gray-300">
+        </div>
+        <div class="text-center">
+          <h3 class="mono text-sm mb-6">CONTACT INFO</h3>
+          <div class="space-y-6">
+            <div>
+              <div class="mono text-xs text-gray-500 mb-1">EMAIL</div>
+              <div class="text-lg">sylvester@ziantra.co.uk</div>
+            </div>
+            <div>
+              <div class="mono text-xs text-gray-500 mb-1">PHONE</div>
+              <div class="text-lg">+44 07448805234</div>
+            </div>
+            <div>
+              <div class="mono text-xs text-gray-500 mb-1">BASED IN</div>
+              <div class="text-lg">London, England</div>
+            </div>
+          </div>
+        </div>
 
         <div class="mt-8">
           <h3 class="mono text-sm mb-6 text-center">SOCIAL</h3>
@@ -544,9 +550,11 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
+
       <!-- FAQ SECTION  -->
 
 <section id="faq" class="py-20 px-8 bg-white">
