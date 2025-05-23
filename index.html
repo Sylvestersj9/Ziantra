@@ -120,8 +120,9 @@
                 <a href="#about-and-skills" class="nav-link text-sm">About</a>
                 <a href="#contact" class="nav-link text-sm">Contact</a>
             </div>
-            <button class="md:hidden">
+            <button class="md:hidden" aria-label="Menu">
                 <i class="fas fa-bars text-xl"></i>
+                <span>Menu</span>
             </button>
         </div>
     </nav>
@@ -248,7 +249,7 @@
                     </a>
 
                     <!-- WhatsApp Button -->
-                    <a href="https://wa.link/i1g0vr" target="_blank" class="px-6 py-3 border border-black rounded-sm font-medium text-sm mono hover:bg-black hover:text-white transition-all duration-300 inline-flex items-center hover-scale mt-4">
+                    <a href="https://wa.link/i1g0vr" target="_blank" rel="noopener" class="px-6 py-3 border border-black rounded-sm font-medium text-sm mono hover:bg-black hover:text-white transition-all duration-300 inline-flex items-center hover-scale mt-4">
                         WhatsApp Me
                         <i class="fab fa-whatsapp ml-2 text-xs"></i> <!-- WhatsApp Icon -->
                     </a>
@@ -410,34 +411,43 @@
 <!-- AUTOMATION SOLUTIONS SHOWCASE SECTION -->
 <section id="automation-showcase" class="py-20 px-8 bg-white">
   <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6">
       Discover Smarter, Faster Workflows with Ziantra
     </h2>
     <p class="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
-      We design and build custom automations that save you time, reduce manual effort, and let you focus on what really matters. No matter your business or industry, Ziantra connects, streamlines, and powers up your workflow—so you can work less and achieve more.
+      We design and build custom automations that save you time, reduce manual effort, and let you focus on what really matters.<br>
+      No matter your business or industry, Ziantra connects, streamlines, and powers up your workflow—so you can work less and achieve more.
     </p>
 
-    <!-- Main Offer Card -->
-    <div class="mx-auto bg-gray-50 rounded-xl shadow-md p-10 mb-8">
-      <h3 class="text-2xl font-bold mb-4">What We Offer</h3>
-      <ul class="text-left text-gray-700 space-y-4 text-lg max-w-xl mx-auto">
-        <li><strong>✓ Automated Email & Inbox Management</strong><br>
-          Instantly sort, label, and prioritize your emails. Draft, reply, and follow-up with AI, so your team never misses an important message again.</li>
-        <li><strong>✓ Appointment & Calendar Automation</strong><br>
-          Schedule, reschedule, and manage bookings without lifting a finger. Prevent double-bookings and send reminders automatically.</li>
-        <li><strong>✓ Lead & Client Follow-up Automation</strong><br>
-          Never lose a lead. Automate follow-ups, onboarding, and feedback collection for sales, recruitment, or support.</li>
-        <li><strong>✓ Data Entry & Report Automation</strong><br>
-          Auto-update spreadsheets, generate reports, and organize data in your favourite apps (Google Sheets, Airtable, Notion, etc.).</li>
-        <li><strong>✓ Chatbot & AI Assistant Integration</strong><br>
-          Add WhatsApp, Telegram, or website bots that answer questions, qualify leads, and handle FAQs 24/7.</li>
-        <li><strong>✓ Custom Workflows for Any Industry</strong><br>
-          If your business has repetitive or tedious processes, we’ll automate them. From care homes to agencies, coaches, creators, and more.</li>
-      </ul>
-      <p class="mt-8 text-xl font-semibold text-green-700">Don’t see what you need? <span class="text-black">We build any automation you can imagine.</span></p>
+    <div class="mx-auto bg-gray-50 rounded-xl shadow p-10 mb-8">
+      <h3 class="text-2xl font-bold mb-6 text-left">What We Offer</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 text-left text-gray-700 text-base">
+        <div>
+          <div class="font-semibold mb-1">Automated Email & Inbox Management</div>
+          <div class="text-gray-500 mb-4">Instantly sort, label, and prioritize your emails. Draft, reply, and follow-up with AI, so your team never misses an important message again.</div>
+
+          <div class="font-semibold mb-1">Appointment & Calendar Automation</div>
+          <div class="text-gray-500 mb-4">Schedule, reschedule, and manage bookings automatically. Prevent double-bookings and send reminders with zero manual effort.</div>
+
+          <div class="font-semibold mb-1">Lead & Client Follow-up Automation</div>
+          <div class="text-gray-500 mb-4">Never lose a lead. Automate follow-ups, onboarding, and feedback collection for sales, recruitment, or support.</div>
+        </div>
+        <div>
+          <div class="font-semibold mb-1">Data Entry & Report Automation</div>
+          <div class="text-gray-500 mb-4">Auto-update spreadsheets, generate reports, and organize data in your favourite apps (Google Sheets, Airtable, Notion, etc.).</div>
+
+          <div class="font-semibold mb-1">Chatbot & AI Assistant Integration</div>
+          <div class="text-gray-500 mb-4">Add WhatsApp, Telegram, or website bots that answer questions, qualify leads, and handle FAQs 24/7.</div>
+
+          <div class="font-semibold mb-1">Custom Workflows for Any Industry</div>
+          <div class="text-gray-500">If your business has repetitive or tedious processes, we’ll automate them. From care homes to agencies, coaches, creators, and more.</div>
+        </div>
+      </div>
+      <div class="mt-10 text-base text-gray-700">
+        <span class="font-semibold text-black">Don’t see what you need?</span> We build any automation you can imagine.
+      </div>
       <a href="#contact" class="mt-10 inline-block bg-black text-white text-lg font-semibold px-10 py-4 rounded shadow hover:bg-gray-800 transition-all duration-300">Get Started</a>
     </div>
-
     <p class="text-gray-500 text-sm mt-8">
       Spend less time on admin. Spend more time on your business.<br>
       <span class="font-medium text-black">Book a call today and let Ziantra automate the boring stuff for you.</span>
@@ -526,9 +536,9 @@
           <h3 class="mono text-sm mb-6 text-center">SOCIAL</h3>
           <div class="flex space-x-6 justify-center">
             <a href="mailto:sylvester@ziantra.co.uk" class="w-12 h-12 border border-gray-300 rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all duration-300"><i class="fas fa-envelope text-sm"></i></a>
-            <a href="https://www.facebook.com/sylvester.janve.7/" target="_blank" class="w-12 h-12 border border-gray-300 rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all duration-300"><i class="fab fa-facebook text-sm"></i></a>
-            <a href="https://www.instagram.com/sylvesterjanve/?hl=en" target="_blank" class="w-12 h-12 border border-gray-300 rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all duration-300"><i class="fab fa-instagram text-sm"></i></a>
-            <a href="https://www.linkedin.com/in/sylvesterjanve/" target="_blank" class="w-12 h-12 border border-gray-300 rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all duration-300"><i class="fab fa-linkedin-in text-sm"></i></a>
+            <a href="https://www.facebook.com/sylvester.janve.7/" target="_blank" rel="noopener" class="w-12 h-12 border border-gray-300 rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all duration-300"><i class="fab fa-facebook text-sm"></i></a>
+            <a href="https://www.instagram.com/sylvesterjanve/?hl=en" target="_blank" rel="noopener" class="w-12 h-12 border border-gray-300 rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all duration-300"><i class="fab fa-instagram text-sm"></i></a>
+            <a href="https://www.linkedin.com/in/sylvesterjanve/" target="_blank" rel="noopener" class="w-12 h-12 border border-gray-300 rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all duration-300"><i class="fab fa-linkedin-in text-sm"></i></a>
           </div>
         </div>
       </div>
@@ -646,7 +656,7 @@
         <a href="#work" class="footer-link mono text-sm">Work</a>
         <a href="#about-and-skills" class="footer-link mono text-sm">About</a>
         <a href="#contact" class="footer-link mono text-sm">Contact</a>
-        <a href="https://www.instagram.com/sylvesterjanve/?hl=en" target="_blank" class="footer-link mono text-sm">Instagram</a>
+        <a href="https://www.instagram.com/sylvesterjanve/?hl=en" target="_blank" rel="noopener" class="footer-link mono text-sm">Instagram</a>
       </div>
     </div>
   </div>
