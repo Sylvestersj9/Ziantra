@@ -1,92 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sylvester's n8n Automation Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      margin: 0;
-      padding: 20px;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    h1 {
-      font-size: 2em;
-      margin-bottom: 0.2em;
-    }
-    p {
-      font-size: 1.1em;
-      color: #555;
-    }
-    .project {
-      background: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .project h2 {
-      margin-top: 0;
-    }
-    .project img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-top: 10px;
-    }
-    .tools {
-      font-style: italic;
-      color: #777;
-    }
-    .footer {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 0.9em;
-      color: #aaa;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Sylvester's Automation Portfolio</h1>
-    <p>Here’s a selection of n8n workflows I’ve built to solve real business problems through smart automation.</p>
-  </header>
+# ⚙️ Ziantra Automation Portfolio
 
-  <div class="project">
-    <h2>📬 Smart Email Assistant</h2>
-    <p>Extracts structured data from incoming emails and logs it in Airtable.</p>
-    <p class="tools">Tools: Gmail, JavaScript, Airtable, n8n</p>
-    <img src="your-screenshot-url-here" alt="Smart Email Assistant Workflow">
-  </div>
+[![Built with n8n](https://img.shields.io/badge/Built%20with-n8n-brightgreen)](https://n8n.io)  
+[![Smart Workflows](https://img.shields.io/badge/Smart%20Automation-Ziantra-blue)](https://ziantra.co.uk)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
 
-  <div class="project">
-    <h2>📞 Voice AI Receptionist</h2>
-    <p>Handles incoming calls, schedules appointments, and sends follow-ups.</p>
-    <p class="tools">Tools: Vapi, Google Calendar, Airtable, n8n</p>
-    <img src="your-screenshot-url-here" alt="Voice AI Receptionist Workflow">
-  </div>
+A collection of powerful no-code automation workflows built by [Ziantra](https://ziantra.co.uk) using 💚 [n8n](https://n8n.io). These automations help professionals and care providers save time, reduce manual tasks, and boost productivity.
 
-  <div class="project">
-    <h2>📚 RAG Chatbot System</h2>
-    <p>Retrieves answers from internal documents using vector search.</p>
-    <p class="tools">Tools: Supabase, OpenAI, Telegram, n8n</p>
-    <img src="your-screenshot-url-here" alt="RAG Chatbot Workflow">
-  </div>
+---
 
-  <div class="project">
-    <h2>🚨 Support Escalation Bot</h2>
-    <p>Monitors emails, runs sentiment analysis, and escalates complaints automatically.</p>
-    <p class="tools">Tools: Gmail, OpenRouter, Slack, Airtable, n8n</p>
-    <img src="your-screenshot-url-here" alt="Support Escalation Bot Workflow">
-  </div>
+## 🧠 Featured Workflows
 
-  <div class="footer">
-    <p>Let’s work together or talk ideas. Drop me an email at <a href="mailto:janvesylvester@gmail.com">janvesylvester@gmail.com</a> — always happy to chat.</p>
-  </div>
-</body>
-</html>
+### 📬 Smart Email Assistant  
+🔍 Parses incoming emails, extracts structured data (like amount, sender, date), and logs them into Airtable.  
+🔧 **Tools:** Gmail, JavaScript, Airtable, n8n  
+📸 **Screenshot:** *[Insert your image link here]*  
+
+---
+
+### 📞 Voice AI Receptionist  
+📱 Answers calls using Vapi, checks availability via Google Calendar, books appointments, and sends follow-ups via email/SMS.  
+🔧 **Tools:** Vapi, Google Calendar, Airtable, n8n  
+📸 **Screenshot:** *[Insert your image link here]*  
+
+---
+
+### 🧾 RAG Chatbot System  
+💬 A Telegram chatbot that responds to user questions by querying internal policy or care documents using vector search (RAG).  
+🔧 **Tools:** Supabase, OpenAI, Telegram, n8n  
+📸 **Screenshot:** *[Insert your image link here]*  
+
+---
+
+### 🚨 Support Escalation Bot  
+📧 Monitors support inboxes for complaints or negative sentiment and automatically escalates priority cases to Slack.  
+🔧 **Tools:** Gmail, OpenRouter, Slack, Airtable, n8n  
+📸 **Screenshot:** *[Insert your image link here]*  
+
+---
+
+## 🌍 Deployment
+
+You can deploy these workflows using:
+
+- 🐳 **Docker** (preferred for self-hosted)  
+- ☁️ **n8n Cloud** ([n8n.cloud](https://n8n.cloud))  
+- 🔐 Set environment variables securely using `.env` or via UI  
+- 🔒 Secure webhooks via token or basic auth  
+
+---
+
+## 🛠️ Built With
+
+- 🌐 [n8n](https://n8n.io) — The no-code automation engine  
+- 🗃️ [Supabase](https://supabase.com) — Vector DB + Realtime backend  
+- 🤖 [OpenAI](https://openai.com) — Language intelligence  
+- 📊 [Airtable](https://airtable.com) — Flexible spreadsheet DB  
+- 📞 [Vapi AI](https://vapi.ai) — Conversational voice API  
+- 💬 [Telegram](https://telegram.org) — Messaging interface  
+
+---
+
+## 🤝 Contributing
+
+Got suggestions or ideas? Want to share your own automation templates?  
+Please check out [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a PR.
+
+---
+
+## 📌 Versioning
+
+This repo uses [Semantic Versioning](https://semver.org).  
+👉 View all versions here: [Releases](https://github.com/ziantra/automation-portfolio/releases)
+
+---
+
+## 👤 Author
+
+**Sylvester (Ziantra)**  
+🌍 [ziantra.co.uk](https://ziantra.co.uk)  
+✉️ [janvesylvester@gmail.com](mailto:janvesylvester@gmail.com)
+
+---
+
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE.md).
+
+---
+
+## 🙏 Acknowledgments
+
+🚀 Thanks to [n8n](https://n8n.io) and [Supabase](https://supabase.com) communities  
+💡 Inspired by real challenges in social care and operations  
+🙌 Special thanks to early clients and testers
