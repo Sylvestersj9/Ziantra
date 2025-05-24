@@ -86,7 +86,7 @@
   </div>
 
   <div class="footer">
-    <p>Want to collaborate or need something automated? Contact me at janvesylvester@gmail.com</p>
+    <p>Let’s work together or talk ideas. Drop me an email at <a href="mailto:janvesylvester@gmail.com">janvesylvester@gmail.com</a> — always happy to chat.</p>
   </div>
 </body>
 </html>
