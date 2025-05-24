@@ -78,7 +78,7 @@ This repo uses [Semantic Versioning](https://semver.org).
 
 **Sylvester (Ziantra)**  
 🌍 [ziantra.co.uk](https://ziantra.co.uk)  
-✉️ [janvesylvester@gmail.com](mailto:janvesylvester@gmail.com)
+✉️ [janvesylvester@gmail.com](mailto:sylvester@ziantra.co.uk)
 
 ---
 
