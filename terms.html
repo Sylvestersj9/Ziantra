@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Ziantra</title>
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #fff; color: #000; }
+        .mono { font-family: 'IBM Plex Mono', monospace; }
+        .nav-link, .footer-link { position: relative; }
+        .nav-link::after, .footer-link::after {
+            content: ''; position: absolute; width: 0; height: 1px; bottom: -2px; left: 0; background: #000; transition: width 0.3s;
+        }
+        .nav-link:hover::after, .footer-link:hover::after { width: 100%; }
+    </style>
+</head>
+<body>
+    <!-- Navigation (same as your main site) -->
+    <nav class="fixed w-full z-50 py-6 px-8 bg-white">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="/favicon.svg" alt="Ziantra Logo" class="w-8 h-8" />
+                <span class="text-xl mono font-medium tracking-wide">Ziantra</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="/" class="nav-link text-sm">Home</a>
+                <a href="#work" class="nav-link text-sm">Work</a>
+                <a href="#about-and-skills" class="nav-link text-sm">About</a>
+                <a href="#contact" class="nav-link text-sm">Contact</a>
+                <a href="/privacy.html" class="nav-link text-sm">Privacy Policy</a>
+                <a href="/terms.html" class="nav-link text-sm font-bold">Terms of Service</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="max-w-3xl mx-auto pt-32 pb-20 px-6">
+        <h1 class="text-4xl font-bold mb-10 mt-10">Terms of Service</h1>
+        <div class="prose prose-lg max-w-none">
+            <!-- Replace below with your Terms of Service text or embed link to TermsFeed -->
+            <!-- Example TermsFeed link (replace with your real URL if available): -->
+            <iframe src="https://www.termsfeed.com/live/8d2fe5ba-c211-4190-bd5e-57d0d4660ed5" 
+                style="width:100%; min-height:70vh; border:none; background:transparent;"></iframe>
+            <!-- Or: Paste downloaded HTML/text of your Terms of Service here -->
+        </div>
+    </main>
+
+    <!-- Footer (same as your main site) -->
+    <footer class="py-12 px-8 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="text-xl mono font-medium tracking-wide mb-6 md:mb-0">Ziantra</div>
+            <div class="mono text-sm tracking-wider mb-6 md:mb-0">© 2025 | All Rights Reserved</div>
+            <div class="flex space-x-6">
+                <a href="#work" class="footer-link mono text-sm">Work</a>
+                <a href="#about-and-skills" class="footer-link mono text-sm">About</a>
+                <a href="#contact" class="footer-link mono text-sm">Contact</a>
+                <a href="https://www.instagram.com/sylvesterjanve/?hl=en" target="_blank" rel="noopener" class="footer-link mono text-sm">Instagram</a>
+                <a href="/privacy.html" class="footer-link mono text-sm">Privacy Policy</a>
+                <a href="/terms.html" class="footer-link mono text-sm font-bold">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
