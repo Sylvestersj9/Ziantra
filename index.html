@@ -552,8 +552,8 @@ function closeMobileMenu() {
 
  <!-- Modal -->
 <div id="modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 hidden">
-    <div class="bg-white p-6 rounded-lg max-w-[800px] w-full max-h-[80vh] overflow-auto">
-        <button onclick="closeModal()" class="text-black text-xl font-bold mb-4">X</button>
+    <div class="bg-white p-6 rounded-lg max-w-[800px] w-full max-h-[80vh] overflow-auto relative">
+        <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200 text-2xl font-bold w-8 h-8 flex items-center justify-center">×</button>
         <div id="modal-content"></div>
     </div>
 </div>
@@ -672,10 +672,10 @@ function closeMobileMenu() {
 
 <!-- Modal -->
 <div id="video-modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 hidden">
-  <div class="bg-white p-8 rounded-lg max-w-2xl w-full overflow-y-auto max-h-[90vh]">
-    <button onclick="closeModal()" class="text-black text-xl font-bold mb-4">X</button>
+  <div class="bg-white p-8 rounded-lg max-w-2xl w-full overflow-y-auto max-h-[90vh] relative">
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200 text-2xl font-bold w-8 h-8 flex items-center justify-center">×</button>
 
-    <div class="w-full text-center mb-6">
+    <div class="w-full text-center mb-6 pr-8">
       <h2 class="text-2xl font-bold mb-2">How Does It Work?</h2>
       <p class="text-gray-600 mb-4">We make AI automation simple and effective for businesses and busy professionals.</p>
     </div>
@@ -1278,6 +1278,7 @@ function closeMobileMenu() {
         // Show the modal
         const modal = document.getElementById('modal');
         modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
         
         // Set the content based on the project clicked
         let content = '';
@@ -1350,12 +1351,23 @@ function closeMobileMenu() {
         // Hide the modal
         const modal = document.getElementById('modal');
         modal.classList.add('hidden');
+        document.body.style.overflow = ''; // Restore scrolling
     }
 
     // Close the modal if the user clicks outside of the modal content
     document.getElementById('modal').addEventListener('click', function(event) {
         if (event.target === this) {
             closeModal();
+        }
+    });
+
+    // Close modal with ESC key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            const modal = document.getElementById('modal');
+            if (!modal.classList.contains('hidden')) {
+                closeModal();
+            }
         }
     });
 </script>
@@ -1461,19 +1473,12 @@ function closeMobileMenu() {
 <script>
   function openVideoModal() {
     document.getElementById('video-modal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
   }
 
   function closeModal() {
     document.getElementById('video-modal').classList.add('hidden');
-  }
-</script>
-<script>
-  function openVideoModal() {
-    document.getElementById('video-modal').classList.remove('hidden');
-  }
-
-  function closeModal() {
-    document.getElementById('video-modal').classList.add('hidden');
+    document.body.style.overflow = ''; // Restore scrolling
   }
 
   // Close modal when clicking outside of modal content
@@ -1483,12 +1488,22 @@ function closeMobileMenu() {
       closeModal();
     }
   });
+
+  // Close modal with ESC key
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      const modal = document.getElementById('video-modal');
+      if (!modal.classList.contains('hidden')) {
+        closeModal();
+      }
+    }
+  });
 </script>
 <!-- Automations Modal -->
 <div id="automations-modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 hidden">
-  <div class="bg-white p-8 rounded-lg max-w-3xl w-full overflow-y-auto max-h-[90vh]">
-    <button onclick="closeAutomationsModal()" class="text-black text-xl font-bold mb-4">X</button>
-    <div class="w-full text-center mb-6">
+  <div class="bg-white p-8 rounded-lg max-w-3xl w-full overflow-y-auto max-h-[90vh] relative">
+    <button onclick="closeAutomationsModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200 text-2xl font-bold w-8 h-8 flex items-center justify-center">×</button>
+    <div class="w-full text-center mb-6 pr-8">
       <h2 class="text-2xl font-bold mb-2">Our Automation Services</h2>
       <p class="text-gray-600 mb-4">Explore the range of automations Ziantra offers to streamline your business processes.</p>
     </div>
@@ -1578,10 +1593,12 @@ function closeMobileMenu() {
 <script>
   function openAutomationsModal() {
     document.getElementById('automations-modal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
   }
 
   function closeAutomationsModal() {
     document.getElementById('automations-modal').classList.add('hidden');
+    document.body.style.overflow = ''; // Restore scrolling
   }
 
   // Close modal when clicking outside of modal content
@@ -1589,6 +1606,16 @@ function closeMobileMenu() {
     const modal = document.getElementById('automations-modal');
     if (!modal.classList.contains('hidden') && event.target === modal) {
       closeAutomationsModal();
+    }
+  });
+
+  // Close modal with ESC key
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      const modal = document.getElementById('automations-modal');
+      if (!modal.classList.contains('hidden')) {
+        closeAutomationsModal();
+      }
     }
   });
 </script>
@@ -1603,28 +1630,11 @@ function closeMobileMenu() {
     </div>
   </div>
 </div>
-<script>
-  function openAutomationsModal() {
-    document.getElementById('automations-modal').classList.remove('hidden');
-  }
-
-  function closeAutomationsModal() {
-    document.getElementById('automations-modal').classList.add('hidden');
-  }
-
-  // Allow closing by clicking outside
-  document.addEventListener('click', function(event) {
-    const modal = document.getElementById('automations-modal');
-    if (!modal.classList.contains('hidden') && event.target === modal) {
-      closeAutomationsModal();
-    }
-  });
-</script>
 <!-- Care Sector Discount Modal -->
 <div id="care-sector-modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 hidden">
-  <div class="bg-white p-8 rounded-lg max-w-5xl w-full overflow-y-auto max-h-[90vh]">
-    <button onclick="closeCareSectorModal()" class="text-black text-xl font-bold mb-4">X</button>
-    <div class="w-full text-center mb-6">
+  <div class="bg-white p-8 rounded-lg max-w-5xl w-full overflow-y-auto max-h-[90vh] relative">
+    <button onclick="closeCareSectorModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200 text-2xl font-bold w-8 h-8 flex items-center justify-center">×</button>
+    <div class="w-full text-center mb-6 pr-8">
       <h2 class="text-3xl font-bold mb-2">Special Offer for Care Home Professionals</h2>
       <p class="text-gray-600 mb-4 max-w-3xl mx-auto">
         For Homes Managers, Care Staff, and Support Workers across the UK.  
@@ -1700,10 +1710,12 @@ function closeMobileMenu() {
 <script>
   function openCareSectorModal() {
     document.getElementById('care-sector-modal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
   }
 
   function closeCareSectorModal() {
     document.getElementById('care-sector-modal').classList.add('hidden');
+    document.body.style.overflow = ''; // Restore scrolling
   }
 
   // Close on outside click
@@ -1711,6 +1723,16 @@ function closeMobileMenu() {
     const modal = document.getElementById('care-sector-modal');
     if (!modal.classList.contains('hidden') && event.target === modal) {
       closeCareSectorModal();
+    }
+  });
+
+  // Close modal with ESC key
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      const modal = document.getElementById('care-sector-modal');
+      if (!modal.classList.contains('hidden')) {
+        closeCareSectorModal();
+      }
     }
   });
 </script>
