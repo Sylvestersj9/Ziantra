@@ -508,7 +508,7 @@ function closeMobileMenu() {
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Project 1: AI-Driven Appointment Booking Agent -->
-            <a href="javascript:void(0)" class="project-card group" onclick="openModal('project1')">
+            <a href="javascript:void(0)" class="project-card group" onclick="openProjectModal('project1')">
                 <div class="overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 1" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
                 </div>
@@ -522,7 +522,7 @@ function closeMobileMenu() {
             </a>
             
             <!-- Project 2: Responsive Website & Business Email Setup -->
-            <a href="javascript:void(0)" class="project-card group" onclick="openModal('project2')">
+            <a href="javascript:void(0)" class="project-card group" onclick="openProjectModal('project2')">
                 <div class="overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 2" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
                 </div>
@@ -536,7 +536,7 @@ function closeMobileMenu() {
             </a>
             
             <!-- Project 3: AI-Powered Lead Follow-Up Automation -->
-            <a href="javascript:void(0)" class="project-card group" onclick="openModal('project3')">
+            <a href="javascript:void(0)" class="project-card group" onclick="openProjectModal('project3')">
                 <div class="overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 3" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
                 </div>
@@ -553,7 +553,7 @@ function closeMobileMenu() {
  <!-- Modal -->
 <div id="modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 hidden">
     <div class="bg-white p-6 rounded-lg max-w-[800px] w-full max-h-[80vh] overflow-auto relative">
-        <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200 text-2xl font-bold w-8 h-8 flex items-center justify-center">×</button>
+        <button onclick="closeProjectModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200 text-2xl font-bold w-8 h-8 flex items-center justify-center">×</button>
         <div id="modal-content"></div>
     </div>
 </div>
@@ -673,7 +673,7 @@ function closeMobileMenu() {
 <!-- Modal -->
 <div id="video-modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 hidden">
   <div class="bg-white p-8 rounded-lg max-w-2xl w-full overflow-y-auto max-h-[90vh] relative">
-    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200 text-2xl font-bold w-8 h-8 flex items-center justify-center">×</button>
+    <button onclick="closeVideoModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200 text-2xl font-bold w-8 h-8 flex items-center justify-center">×</button>
 
     <div class="w-full text-center mb-6 pr-8">
       <h2 class="text-2xl font-bold mb-2">How Does It Work?</h2>
@@ -711,7 +711,7 @@ function closeMobileMenu() {
 
     <!-- CTA Button -->
     <div class="text-center">
-    <a href="#contact" onclick="closeModal()" class="button-star-border">
+    <a href="#contact" onclick="closeVideoModal()" class="button-star-border">
         <div class="border-gradient-bottom"></div>
         <div class="border-gradient-top"></div>
         <div class="inner-content">Let's Get Started</div>
@@ -723,14 +723,16 @@ function closeMobileMenu() {
 
 <!-- Script to handle modal open and close -->
 <script>
-    // Open the modal
-    function openModal() {
+    // Open the video modal
+    function openVideoModal() {
         document.getElementById('video-modal').classList.remove('hidden'); // Show the modal
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
     }
 
-    // Close the modal
-    function closeModal() {
+    // Close the video modal
+    function closeVideoModal() {
         document.getElementById('video-modal').classList.add('hidden'); // Hide the modal
+        document.body.style.overflow = ''; // Restore scrolling
     }
 </script>
 
@@ -1274,7 +1276,7 @@ function closeMobileMenu() {
     <title>Ziantra | Creative Portfolio</title>
 <!-- POPUP OPEN MODAL -->
 <script>
-    function openModal(projectId) {
+    function openProjectModal(projectId) {
         // Show the modal
         const modal = document.getElementById('modal');
         modal.classList.remove('hidden');
@@ -1347,7 +1349,7 @@ function closeMobileMenu() {
         document.getElementById('modal-content').innerHTML = content;
     }
 
-    function closeModal() {
+    function closeProjectModal() {
         // Hide the modal
         const modal = document.getElementById('modal');
         modal.classList.add('hidden');
@@ -1357,7 +1359,7 @@ function closeMobileMenu() {
     // Close the modal if the user clicks outside of the modal content
     document.getElementById('modal').addEventListener('click', function(event) {
         if (event.target === this) {
-            closeModal();
+            closeProjectModal();
         }
     });
 
@@ -1366,7 +1368,7 @@ function closeMobileMenu() {
         if (event.key === 'Escape') {
             const modal = document.getElementById('modal');
             if (!modal.classList.contains('hidden')) {
-                closeModal();
+                closeProjectModal();
             }
         }
     });
@@ -1476,7 +1478,7 @@ function closeMobileMenu() {
     document.body.style.overflow = 'hidden'; // Prevent background scrolling
   }
 
-  function closeModal() {
+  function closeVideoModal() {
     document.getElementById('video-modal').classList.add('hidden');
     document.body.style.overflow = ''; // Restore scrolling
   }
@@ -1485,7 +1487,7 @@ function closeMobileMenu() {
   document.addEventListener('click', function(event) {
     const modal = document.getElementById('video-modal');
     if (!modal.classList.contains('hidden') && event.target === modal) {
-      closeModal();
+      closeVideoModal();
     }
   });
 
@@ -1494,7 +1496,7 @@ function closeMobileMenu() {
     if (event.key === 'Escape') {
       const modal = document.getElementById('video-modal');
       if (!modal.classList.contains('hidden')) {
-        closeModal();
+        closeVideoModal();
       }
     }
   });
