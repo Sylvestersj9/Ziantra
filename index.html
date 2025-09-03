@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Favicon and Icons -->
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/web-app-manifest-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/web-app-manifest-512x512.png">
-<link rel="manifest" href="/site.webmanifest">
+    <!-- Favicon and Icons -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/web-app-manifest-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/web-app-manifest-512x512.png">
+    <link rel="manifest" href="/site.webmanifest">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ziantra | Automate Anything!</title>
+    <title>Ziantra | IT Support for Children's Homes</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -23,87 +23,12 @@
             background-color: #ffffff;
             color: #000000;
             overflow-x: hidden;
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/></svg>'), auto;
         }
         
         .mono {
             font-family: 'IBM Plex Mono', monospace;
         }
-        
-        .hero-title {
-            font-size: clamp(3rem, 10vw, 7rem);
-            line-height: 0.9;
-            letter-spacing: -0.05em;
-            font-weight: 700;
-        }
-        
-        .nav-link {
-            position: relative;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: -2px;
-            left: 0;
-            background-color: #000000;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .project-card {
-            transition: all 0.3s ease;
-            border: 1px solid #f1f1f1;
-        }
-        
-        .project-card:hover {
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-        }
-        
-        .footer-link {
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        
-        .footer-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: -2px;
-            left: 0;
-            background-color: #000000;
-            transition: width 0.3s ease;
-        }
-        
-        .footer-link:hover::after {
-            width: 100%;
-        }
-        
-        #threejs-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-        }
-        
-        .hover-scale {
-            transition: transform 0.3s ease;
-        }
-        
-        .hover-scale:hover {
-            transform: scale(1.05);
-        }
 
-        /* Modern Header Styles */
         .modern-header {
             transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             backdrop-filter: blur(20px);
@@ -116,30 +41,9 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
         }
 
-        .logo-container {
-            position: relative;
-            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .logo-container:hover {
-            transform: scale(1.02);
-        }
-
-        .logo-badge {
-            background: linear-gradient(135deg, #ef4444, #dc2626, #b91c1c);
-            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
-            transition: all 0.3s ease;
-        }
-            50% { opacity: 0.5; }
-        }
-
         .nav-item {
             position: relative;
             transition: all 0.2s ease;
-        }
-
-        .nav-item:hover {
-            color: #000000;
         }
 
         .nav-hover-bg {
@@ -154,93 +58,7 @@
         .nav-item:hover .nav-hover-bg {
             opacity: 1;
         }
-
-        .search-btn, .mobile-menu-btn {
-            transition: all 0.2s ease;
-            border-radius: 8px;
-        }
-
-        .search-btn:hover, .mobile-menu-btn:hover {
-            background-color: #f5f5f5;
-            transform: scale(1.05);
-        }
-
-        .search-btn:active, .mobile-menu-btn:active {
-            transform: scale(0.95);
-        }
-
-        .sign-in-btn {
-            transition: all 0.2s ease;
-        }
-
-        .sign-in-btn:hover {
-            color: #000000;
-        }
-
-        .get-started-btn {
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .get-started-btn:hover {
-            background-color: rgba(0, 0, 0, 0.9);
-            transform: scale(1.02);
-        }
-
-        .get-started-btn:active {
-            transform: scale(0.98);
-        }
-
-        /* Mobile Menu Styles */
-        .mobile-menu-overlay {
-            background-color: rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            transition: opacity 0.3s ease;
-        }
-
-        .mobile-menu {
-            background-color: #ffffff;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            transform: translateX(100%);
-            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .mobile-menu.open {
-            transform: translateX(0);
-        }
-
-        .mobile-menu-item {
-            transition: all 0.2s ease;
-            border-radius: 8px;
-        }
-
-        .mobile-menu-item:hover {
-            background-color: #f5f5f5;
-        }
-
-        /* Header Animation Classes */
-        .animate-fade-in {
-            animation: fadeIn 0.6s ease-out;
-        }
-
-        .animate-fade-in-delay {
-            animation: fadeIn 0.6s ease-out 0.1s both;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Button Star Border Styles (if not already defined) */
+        
         .button-star-border {
             position: relative;
             display: inline-flex;
@@ -266,7 +84,6 @@
             position: relative;
             z-index: 2;
         }
-
         .border-gradient-bottom,
         .border-gradient-top {
             position: absolute;
@@ -282,1462 +99,211 @@
     </style>
 </head>
 <body>
-    <!-- Three.js Container -->
-    <div id="threejs-container"></div>
-   <!-- Modern Navigation Header -->
-<header id="modern-header" class="modern-header fixed w-full z-50 bg-transparent">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex h-16 items-center justify-between">
-            <!-- Logo Section -->
-            <div class="logo-container animate-fade-in flex items-center space-x-3">
-                <a href="/" class="flex items-center space-x-3">
-                    <div class="relative">
-                        <img src="favicon.svg" alt="Ziantra Logo" class="w-8 h-8" />
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="text-lg font-bold mono tracking-wide">Ziantra</span>
-                        <span class="-mt-1 text-xs text-gray-500">Automate faster</span>
-                    </div>
-                </a>
-            </div>
+    
+    <!-- Modern Navigation Header -->
+    <header id="modern-header" class="modern-header fixed w-full z-50 bg-transparent">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <!-- Logo Section -->
+                <div class="logo-container animate-fade-in flex items-center space-x-3">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <div class="relative">
+                            <img src="favicon.svg" alt="Ziantra Logo" class="w-8 h-8" />
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-lg font-bold mono tracking-wide">Ziantra</span>
+                            <span class="-mt-1 text-xs text-gray-500">Automate faster</span>
+                        </div>
+                    </a>
+                </div>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden lg:flex items-center space-x-1 animate-fade-in-delay">
-                <div class="nav-item relative rounded-lg px-4 py-2">
-                    <div class="nav-hover-bg"></div>
-                    <a href="#home" class="relative z-10 text-sm font-medium text-gray-700">Home</a>
-                </div>
-                <div class="nav-item relative rounded-lg px-4 py-2">
-                    <div class="nav-hover-bg"></div>
-                    <a href="#work" class="relative z-10 text-sm font-medium text-gray-700">Work</a>
-                </div>
-                <div class="nav-item relative rounded-lg px-4 py-2">
-                    <div class="nav-hover-bg"></div>
-                    <a href="#about-and-skills" class="relative z-10 text-sm font-medium text-gray-700">About</a>
-                </div>
-                <div class="nav-item relative rounded-lg px-4 py-2">
-                    <div class="nav-hover-bg"></div>
-                    <a href="#contact" class="relative z-10 text-sm font-medium text-gray-700">Contact</a>
-                </div>
-                <div class="nav-item relative rounded-lg px-4 py-2">
-                    <div class="nav-hover-bg"></div>
-                    <a href="privacy.html" class="relative z-10 text-sm font-medium text-gray-700">Privacy</a>
-                </div>
-                <div class="nav-item relative rounded-lg px-4 py-2">
-                    <div class="nav-hover-bg"></div>
-                    <a href="terms.html" class="relative z-10 text-sm font-medium text-gray-700">Terms</a>
-                </div>
-            </nav>
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-1 animate-fade-in-delay">
+                    <div class="nav-item relative rounded-lg px-4 py-2">
+                        <div class="nav-hover-bg"></div>
+                        <a href="index.html" class="relative z-10 text-sm font-medium text-gray-700">Home</a>
+                    </div>
+                    <div class="nav-item relative rounded-lg px-4 py-2">
+                        <div class="nav-hover-bg"></div>
+                        <a href="index.html#work" class="relative z-10 text-sm font-medium text-gray-700">Work</a>
+                    </div>
+                    <div class="nav-item relative rounded-lg px-4 py-2">
+                        <div class="nav-hover-bg"></div>
+                        <a href="it-support.html" class="relative z-10 text-sm font-medium text-black">IT Support</a>
+                    </div>
+                    <div class="nav-item relative rounded-lg px-4 py-2">
+                        <div class="nav-hover-bg"></div>
+                        <a href="index.html#about-and-skills" class="relative z-10 text-sm font-medium text-gray-700">About</a>
+                    </div>
+                    <div class="nav-item relative rounded-lg px-4 py-2">
+                        <div class="nav-hover-bg"></div>
+                        <a href="index.html#contact" class="relative z-10 text-sm font-medium text-gray-700">Contact</a>
+                    </div>
+                </nav>
 
-            <!-- Desktop Actions -->
-            <div class="hidden lg:flex items-center space-x-3 animate-fade-in-delay">
-                <button class="search-btn rounded-lg p-2 text-gray-500">
-                    <i class="fas fa-search text-sm"></i>
+                <!-- Desktop Actions -->
+                <div class="hidden lg:flex items-center space-x-3 animate-fade-in-delay">
+                    <button class="search-btn rounded-lg p-2 text-gray-500">
+                        <i class="fas fa-search text-sm"></i>
+                    </button>
+                    <a href="index.html#contact" class="get-started-btn inline-flex items-center space-x-2 rounded-lg bg-black px-5 py-2.5 text-sm font-medium text-white">
+                        <span>Get Started</span>
+                        <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-toggle" class="mobile-menu-btn rounded-lg p-2 text-black lg:hidden animate-fade-in-delay">
+                    <i id="menu-icon" class="fas fa-bars text-lg"></i>
                 </button>
-                
-                <a href="#contact" class="get-started-btn inline-flex items-center space-x-2 rounded-lg bg-black px-5 py-2.5 text-sm font-medium text-white">
-                    <span>Get Started</span>
-                    <i class="fas fa-arrow-right text-xs"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-overlay" class="mobile-menu-overlay fixed inset-0 z-40 lg:hidden opacity-0 pointer-events-none"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed right-4 top-16 z-50 w-80 rounded-2xl lg:hidden">
+        <div class="space-y-6 p-6">
+            <div class="space-y-1">
+                <a href="index.html" class="mobile-menu-item block px-4 py-3 font-medium text-black">Home</a>
+                <a href="index.html#work" class="mobile-menu-item block px-4 py-3 font-medium text-black">Work</a>
+                <a href="it-support.html" class="mobile-menu-item block px-4 py-3 font-medium text-black">IT Support</a>
+                <a href="index.html#about-and-skills" class="mobile-menu-item block px-4 py-3 font-medium text-black">About</a>
+                <a href="index.html#contact" class="mobile-menu-item block px-4 py-3 font-medium text-black">Contact</a>
+            </div>
+            
+            <div class="space-y-3 border-t border-gray-200 pt-6">
+                <a href="index.html#contact" class="block w-full rounded-lg bg-black py-3 text-center font-medium text-white">
+                    Get Started
                 </a>
             </div>
-
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-toggle" class="mobile-menu-btn rounded-lg p-2 text-black lg:hidden animate-fade-in-delay">
-                <i id="menu-icon" class="fas fa-bars text-lg"></i>
-            </button>
         </div>
     </div>
-</header>
-
-<!-- Mobile Menu Overlay -->
-<div id="mobile-overlay" class="mobile-menu-overlay fixed inset-0 z-40 lg:hidden opacity-0 pointer-events-none"></div>
-
-<!-- Mobile Menu -->
-<div id="mobile-menu" class="mobile-menu fixed right-4 top-16 z-50 w-80 rounded-2xl lg:hidden">
-    <div class="space-y-6 p-6">
-        <div class="space-y-1">
-            <a href="#home" class="mobile-menu-item block px-4 py-3 font-medium text-black">Home</a>
-            <a href="#work" class="mobile-menu-item block px-4 py-3 font-medium text-black">Work</a>
-            <a href="#about-and-skills" class="mobile-menu-item block px-4 py-3 font-medium text-black">About</a>
-            <a href="#contact" class="mobile-menu-item block px-4 py-3 font-medium text-black">Contact</a>
-            <a href="privacy.html" class="mobile-menu-item block px-4 py-3 font-medium text-black">Privacy Policy</a>
-            <a href="terms.html" class="mobile-menu-item block px-4 py-3 font-medium text-black">Terms of Service</a>
-        </div>
-        
-        <div class="space-y-3 border-t border-gray-200 pt-6">
-            <a href="#contact" class="block w-full rounded-lg bg-black py-3 text-center font-medium text-white">
-                Get Started
-            </a>
-        </div>
-    </div>
-</div>
-
-<script>
-// Modern Header Functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const header = document.getElementById('modern-header');
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileOverlay = document.getElementById('mobile-overlay');
-    const menuIcon = document.getElementById('menu-icon');
-    let isMobileMenuOpen = false;
-
-    // Handle scroll effect for header
-    function handleScroll() {
-        if (window.scrollY > 10) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    }
-
-    // Toggle mobile menu
-    function toggleMobileMenu() {
-        isMobileMenuOpen = !isMobileMenuOpen;
-        
-        if (isMobileMenuOpen) {
-            mobileMenu.classList.add('open');
-            mobileOverlay.classList.remove('opacity-0', 'pointer-events-none');
-            mobileOverlay.classList.add('opacity-100');
-            menuIcon.className = 'fas fa-times text-lg';
-            document.body.style.overflow = 'hidden';
-        } else {
-            mobileMenu.classList.remove('open');
-            mobileOverlay.classList.add('opacity-0', 'pointer-events-none');
-            mobileOverlay.classList.remove('opacity-100');
-            menuIcon.className = 'fas fa-bars text-lg';
-            document.body.style.overflow = '';
-        }
-    }
-
-    // Close mobile menu when clicking on overlay
-    function closeMobileMenu() {
-        if (isMobileMenuOpen) {
-            toggleMobileMenu();
-        }
-    }
-
-    // Event listeners
-    window.addEventListener('scroll', handleScroll);
-    mobileMenuToggle.addEventListener('click', toggleMobileMenu);
-    mobileOverlay.addEventListener('click', closeMobileMenu);
     
-    // Close mobile menu when clicking on menu items
-    const mobileMenuItems = mobileMenu.querySelectorAll('a');
-    mobileMenuItems.forEach(item => {
-        item.addEventListener('click', (e) => {
-            // Only prevent default for anchor links (not external links)
-            if (item.getAttribute('href').startsWith('#')) {
-                e.preventDefault();
-                const targetId = item.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            }
-            closeMobileMenu();
-        });
-    });
-
-    // Add smooth scrolling to all anchor links in desktop nav too
-    const desktopNavItems = document.querySelectorAll('nav a[href^="#"]');
-    desktopNavItems.forEach(item => {
-        item.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = item.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-
-    // Initial scroll check
-    handleScroll();
-});
-
-// Legacy mobile menu functions (keeping for compatibility)
-function toggleMobileMenu() {
-    // This is handled by the new modern header
-}
-
-function closeMobileMenu() {
-    // This is handled by the new modern header
-}
-</script>
-
-    
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center px-8 pt-20">
-        <div class="max-w-4xl mx-auto">
-            <div class="mb-8">
-                <span class="mono text-sm tracking-wider">AUTOMATE ANYTHING</span>
-                <h1 class="hero-title font-bold my-4">Hello, I'm <span class="border-b-2 border-black">Ziantra</span></h1>
-                <p class="text-xl text-gray-600 max-w-xl">
-                    Streamlining your tasks and boosting productivity with tailored automation solutions.
+    <main class="pt-24">
+        <section id="pricing" class="py-16 px-6 lg:px-12 bg-white">
+            <div class="container mx-auto max-w-7xl">
+                <h2 class="text-4xl lg:text-5xl font-bold text-center text-gray-800 leading-tight mb-4">
+                    Specialist IT Support for Children's Homes
+                </h2>
+                <p class="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+                    Our transparent "per-home" subscription model provides the financial predictability and digital safeguarding that the care sector demands.
                 </p>
-            </div>
-            <div class="flex flex-col sm:flex-row gap-4 mt-12">
-                <a href="#work" class="button-star-border">
-                    <div class="border-gradient-bottom"></div>
-                    <div class="border-gradient-top"></div>
-                    <div class="inner-content">View My Work</div>
-                </a>
-                <a href="#contact" class="button-star-border">
-                    <div class="border-gradient-bottom"></div>
-                    <div class="border-gradient-top"></div>
-                    <div class="inner-content">Get In Touch</div>
-                </a>
-            </div>
-        </div>
-    </section>
-    
-  <!-- Work Section -->
-<section id="work" class="py-20 px-8">
-    <div class="max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 md:mb-0">Selected Projects</h2>
-            <div class="mono text-sm tracking-wider">RECENT WORK</div>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Project 1: AI-Driven Appointment Booking Agent -->
-            <a href="javascript:void(0)" class="project-card group" onclick="openProjectModal('project1')">
-                <div class="overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 1" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+
+                <!-- Pricing Tiers & Discounts -->
+                <div class="overflow-x-auto mb-12">
+                    <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <thead>
+                            <tr class="bg-gray-50 text-left text-sm font-semibold uppercase tracking-wider text-gray-500">
+                                <th class="px-6 py-3 border-b-2 border-gray-200">Service Tier</th>
+                                <th class="px-6 py-3 border-b-2 border-gray-200">Monthly Rolling</th>
+                                <th class="px-6 py-3 border-b-2 border-gray-200">6-Month Contract (10% Off)</th>
+                                <th class="px-6 py-3 border-b-2 border-gray-200">1-Year Contract (15% Off)</th>
+                                <th class="px-6 py-3 border-b-2 border-gray-200">2-Year Contract (20% Off)</th>
+                                <th class="px-6 py-3 border-b-2 border-gray-200">3-Year Contract (25% Off)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="text-gray-700">
+                                <td class="px-6 py-4 border-b border-gray-200 font-medium">Essential Care</td>
+                                <td class="px-6 py-4 border-b border-gray-200">£60</td>
+                                <td class="px-6 py-4 border-b border-gray-200">£54</td>
+                                <td class="px-6 py-4 border-b border-gray-200">£51</td>
+                                <td class="px-6 py-4 border-b border-gray-200">£48</td>
+                                <td class="px-6 py-4 border-b border-gray-200">£45</td>
+                            </tr>
+                            <tr class="text-gray-700">
+                                <td class="px-6 py-4 border-b border-gray-200 font-medium">Compliance Plus</td>
+                                <td class="px-6 py-4 border-b border-gray-200">£100</td>
+                                <td class="px-6 py-4 border-b border-gray-200">£90</td>
+                                <td class="px-6 py-4 border-b border-gray-200">£85</td>
+                                <td class="px-6 py-4 border-b border-gray-200">£80</td>
+                                <td class="px-6 py-4 border-b border-gray-200">£75</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-start">
-                        <h3 class="text-xl font-bold mb-2">AI-Driven Appointment Booking Agent</h3>
-                        <span class="mono text-xs text-gray-500">2023</span>
+
+                <!-- Service Descriptions -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-2xl font-bold mb-4">Essential Care</h3>
+                        <p class="text-gray-600 mb-4">This highly affordable, entry-level option is ideal for smaller homes (up to 4 residents) that need reliable remote support and basic compliance.</p>
+                        <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                            <li>**Remote IT Support:** Unlimited remote troubleshooting for non-technical issues.</li>
+                            <li>**Core Security:** Setup and management of a single, home-wide internet filtering policy.</li>
+                            <li>**Expert Advice:** Unbiased guidance on all IT systems and future purchases.</li>
+                        </ul>
                     </div>
-                    <p class="text-gray-600 text-sm">AI-powered system automating phone calls and appointment bookings for dental practices.</p>
-                </div>
-            </a>
-            
-            <!-- Project 2: Responsive Website & Business Email Setup -->
-            <a href="javascript:void(0)" class="project-card group" onclick="openProjectModal('project2')">
-                <div class="overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 2" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
-                </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-start">
-                        <h3 class="text-xl font-bold mb-2">Responsive Website Development & Business Email Setup</h3>
-                        <span class="mono text-xs text-gray-500">2023</span>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-2xl font-bold mb-4">Compliance Plus</h3>
+                        <p class="text-gray-600 mb-4">This flagship service provides a complete digital safeguarding solution with granular control and proactive management for most homes (up to 8 residents).</p>
+                        <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                            <li>**Everything in Essential Care,** plus:</li>
+                            <li>**Advanced Safeguarding:** Individualized, per-resident internet filtering policies.</li>
+                            <li>**Mobile Device Management (MDM):** Implementation and management of MDM on home-owned devices.</li>
+                            <li>**Secure Communications:** Setup and support for an encrypted email system using non-profit licenses.</li>
+                            <li>**Proactive Management:** Network monitoring and compliance reports for Ofsted evidence portfolios.</li>
+                        </ul>
                     </div>
-                    <p class="text-gray-600 text-sm">Built a fully responsive website and set up professional email systems for a client, ensuring functionality across all devices.</p>
-                </div>
-            </a>
-            
-            <!-- Project 3: AI-Powered Lead Follow-Up Automation -->
-            <a href="javascript:void(0)" class="project-card group" onclick="openProjectModal('project3')">
-                <div class="overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 3" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
-                </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-start">
-                        <h3 class="text-xl font-bold mb-2">AI-Powered Lead Follow-Up Automation for Real Estate Agents</h3>
-                        <span class="mono text-xs text-gray-500">2023</span>
-                    </div>
-                    <p class="text-gray-600 text-sm">Automated lead follow-up system for real estate agents to enhance lead conversion and engagement.</p>
-                </div>
-            </a>
-        </div>
-
- <!-- Modal -->
-<div id="modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 hidden">
-    <div class="bg-white p-6 rounded-lg max-w-[800px] w-full max-h-[80vh] overflow-auto relative">
-        <button onclick="closeProjectModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200 text-2xl font-bold w-8 h-8 flex items-center justify-center">×</button>
-        <div id="modal-content"></div>
-    </div>
-</div>
-
-<div class="text-center mt-12 mb-12">
-  <button onclick="openAutomationsModal()" class="button-star-border">
-    <div class="border-gradient-bottom"></div>
-    <div class="border-gradient-top"></div>
-    <div class="inner-content">View All Automations <i class="fas fa-arrow-right ml-2 text-xs"></i></div>
-  </button>
-</div>
-
-
-  <!-- New content for Carehome automations -->
-<!-- Care Sector Offer Button -->
-<div class="text-center mt-4">
-<button onclick="openCareSectorModal()" class="button-star-border">
-    <div class="border-gradient-bottom"></div>
-    <div class="border-gradient-top"></div>
-    <div class="inner-content">Exclusive Offer for Care Staff</div>
-</button>
-
-</div>
-
-
-    
-  <!-- About Us and Skills Section -->
-<section id="about-and-skills" class="py-20 px-8 bg-gray-50">
-    <div class="max-w-7xl mx-auto">
-        <div class="flex flex-col lg:flex-row gap-16">
-            <!-- About Us Section -->
-            <div class="lg:w-1/2">
-                <h2 class="text-3xl md:text-4xl font-bold mb-8">About Us</h2>
-                <div class="h-px w-20 bg-black mb-8"></div>
-                <p class="text-gray-600 mb-6 text-lg">
-                    <h2 class="text-xl md:text-xl font-bold mb-6">Who We Are:</h2> 
-                    <p class="text-gray-600 mb-6 text-lg">
-                        At Ziantra, we specialize in automating workflows for individuals and small businesses. Our goal is to save you time and increase your efficiency by creating seamless automation that handles repetitive tasks, leaving you free to focus on the things that drive your business forward.
-                    </p>
-                    <p class="text-gray-600 mb-8 text-lg">
-                        Our approach combines aesthetic sensibility with technical precision, resulting in work that's both beautiful and purposeful.
-                    </p>
-                    <a href="tel:+447448805234" class="button-star-border">
-                        <div class="border-gradient-bottom"></div>
-                        <div class="border-gradient-top"></div>
-                        <div class="inner-content">Get in Touch <i class="fas fa-phone ml-2 text-xs"></i></div>
-                    </a>
-
-                    <!-- WhatsApp Button -->
-                    <a href="https://wa.link/i1g0vr" target="_blank" rel="noopener" class="button-star-border">
-                        <div class="border-gradient-bottom"></div>
-                        <div class="border-gradient-top"></div>
-                        <div class="inner-content">WhatsApp Me <i class="fab fa-whatsapp ml-2 text-xs"></i></div>
-                    </a>
-                </p>
-            </div>
-
-            <!-- Skills Section -->
-            <div class="lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Skill 1 -->
-                <div class="p-6 border border-gray-200 bg-white hover:shadow-sm transition-all duration-300">
-                    <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-pencil-ruler"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Automate Repetitive Tasks</h3>
-                    <p class="text-gray-600 text-sm">
-                        From scheduling to data entry, let us handle the mundane tasks so you can focus on growth.
-                    </p>
                 </div>
 
-                <!-- Skill 2 -->
-                <div class="p-6 border border-gray-200 bg-white hover:shadow-sm transition-all duration-300">
-                    <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Web Development</h3>
-                    <p class="text-gray-600 text-sm">
-                        Building responsive, performant websites with modern technologies.
-                    </p>
-                </div>
-
-                <!-- Skill 3 -->
-                <div class="p-6 border border-gray-200 bg-white hover:shadow-sm transition-all duration-300">
-                    <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Custom Workflow Solutions</h3>
-                    <p class="text-gray-600 text-sm">
-                        We build tailored automation that fits your unique needs, ensuring you get the most out of every process.
-                    </p>
-                </div>
-
-                <!-- Skill 4 -->
-                <div class="p-6 border border-gray-200 bg-white hover:shadow-sm transition-all duration-300">
-                    <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-cube"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">IT Support</h3>
-                    <p class="text-gray-600 text-sm">
-                        Whether it's troubleshooting, system setup, or managing your IT infrastructure, we provide IT support of any kind to ensure your business runs smoothly.
-                    </p>
+                <!-- Ad-Hoc & Project Pricing -->
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">Ad-Hoc & Project Pricing</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <thead>
+                            <tr class="bg-gray-50 text-left text-sm font-semibold uppercase tracking-wider text-gray-500">
+                                <th class="px-6 py-3 border-b-2 border-gray-200">Service</th>
+                                <th class="px-6 py-3 border-b-2 border-gray-200">Description</th>
+                                <th class="px-6 py-3 border-b-2 border-gray-200">Standard Rate</th>
+                                <th class="px-6 py-3 border-b-2 border-gray-200">Contract Holder Rate</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="text-gray-700">
+                                <td class="px-6 py-4 border-b border-gray-200 font-medium">Ad-Hoc Hourly Support</td>
+                                <td class="px-6 py-4 border-b border-gray-200">Remote support for non-contracted clients.</td>
+                                <td class="px-6 py-4 border-b border-gray-200">£22.50 per hour</td>
+                                <td class="px-6 py-4 border-b border-gray-200">£18 per hour (20% off)</td>
+                            </tr>
+                            <tr class="text-gray-700">
+                                <td class="px-6 py-4 border-b border-gray-200 font-medium">On-Site Visits</td>
+                                <td class="px-6 py-4 border-b border-gray-200">For issues that cannot be resolved remotely.</td>
+                                <td class="px-6 py-4 border-b border-gray-200">£30 per hour</td>
+                                <td class="px-6 py-4 border-b border-gray-200">£20 per hour (33% off)</td>
+                            </tr>
+                            <tr class="text-gray-700">
+                                <td class="px-6 py-4 border-b border-gray-200 font-medium">New Home IT & Network Setup</td>
+                                <td class="px-6 py-4 border-b border-gray-200">A one-time project fee for setting up an entire home’s IT infrastructure.</td>
+                                <td class="px-6 py-4 border-b border-gray-200">Starting from £250</td>
+                                <td class="px-6 py-4 border-b border-gray-200">Starting from £225 (10% off)</td>
+                            </tr>
+                            <tr class="text-gray-700">
+                                <td class="px-6 py-4 border-b border-gray-200 font-medium">Cloud & Website Migration</td>
+                                <td class="px-6 py-4 border-b border-gray-200">A one-time project fee to set up cloud services, encrypted email, or a website.</td>
+                                <td class="px-6 py-4 border-b border-gray-200">Starting from £175</td>
+                                <td class="px-6 py-4 border-b border-gray-200">Starting from £157.50 (10% off)</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-12 px-8 border-t border-gray-200">
+        <div class="flex space-x-6">
+            <a href="index.html#work" class="footer-link mono text-sm">Work</a>
+            <a href="index.html#about-and-skills" class="footer-link mono text-sm">About</a>
+            <a href="index.html#contact" class="footer-link mono text-sm">Contact</a>
+            <a href="https://www.instagram.com/sylvesterjanve/?hl=en" target="_blank" rel="noopener" class="footer-link mono text-sm">Instagram</a>
+            <a href="/privacy.html" class="footer-link mono text-sm">Privacy Policy</a>
+            <a href="/terms.html" class="footer-link mono text-sm">Terms of Service</a>
         </div>
-    </div>
-</section>
-<!-- Button to open the modal -->
-<div class="text-center mt-8">
-    <button onclick="openVideoModal()" class="button-star-border">
-        <div class="border-gradient-bottom"></div>
-        <div class="border-gradient-top"></div>
-        <div class="inner-content">Click here to see how it works</div>
-    </button>
-</div>
-
-
-<!-- Modal -->
-<div id="video-modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 hidden">
-  <div class="bg-white p-8 rounded-lg max-w-2xl w-full overflow-y-auto max-h-[90vh] relative">
-    <button onclick="closeVideoModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200 text-2xl font-bold w-8 h-8 flex items-center justify-center">×</button>
-
-    <div class="w-full text-center mb-6 pr-8">
-      <h2 class="text-2xl font-bold mb-2">How Does It Work?</h2>
-      <p class="text-gray-600 mb-4">We make AI automation simple and effective for businesses and busy professionals.</p>
-    </div>
-
-    <div class="space-y-6 text-left mb-8">
-      <div>
-        <h3 class="text-xl font-bold mb-2">1. Tell Us What You Need</h3>
-        <p class="text-gray-600">We start by listening to you. Whether it's saving time, automating tasks, or integrating AI into your existing workflows — you tell us what you need, and we'll take it from there. No tech skills required.</p>
-      </div>
-      <div>
-        <h3 class="text-xl font-bold mb-2">2. Book a Free Consultation</h3>
-        <p class="text-gray-600">We'll jump on a quick call to understand your business, your goals, and your current processes. We'll highlight automation opportunities where AI can make the biggest impact on your day-to-day work.</p>
-      </div>
-      <div>
-        <h3 class="text-xl font-bold mb-2">3. We Build and Integrate Your Automation</h3>
-        <p class="text-gray-600">Our team builds custom automations using AI tools like N8N, Make.com, or custom code — fully integrated with your current apps and workflows. You don't have to change the tools you already love.</p>
-      </div>
-      <div>
-        <h3 class="text-xl font-bold mb-2">4. You Get Back to What You Do Best</h3>
-        <p class="text-gray-600">Once everything is live, we provide ongoing support and optimization to keep your workflows running smoothly. You stay focused on growing your business while we handle the automation behind the scenes.</p>
-      </div>
-    </div>
-
-    <!-- Embedded Video Auto-Play Loop -->
-    <div class="w-full mb-8">
-      <iframe width="100%" height="400" 
-        src="https://www.youtube.com/embed/_HFouU4qo_8?autoplay=1&mute=1&loop=1&playlist=_HFouU4qo_8" 
-        frameborder="0" 
-        allow="autoplay; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-      </iframe>
-    </div>
-
-    <!-- CTA Button -->
-    <div class="text-center">
-    <a href="#contact" onclick="closeVideoModal()" class="button-star-border">
-        <div class="border-gradient-bottom"></div>
-        <div class="border-gradient-top"></div>
-        <div class="inner-content">Let's Get Started</div>
-    </a>
-    </div>
-  </div>
-</div>
-
-
-<!-- Script to handle modal open and close -->
-<script>
-    // Open the video modal
-    function openVideoModal() {
-        document.getElementById('video-modal').classList.remove('hidden'); // Show the modal
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
-    }
-
-    // Close the video modal
-    function closeVideoModal() {
-        document.getElementById('video-modal').classList.add('hidden'); // Hide the modal
-        document.body.style.overflow = ''; // Restore scrolling
-    }
-</script>
-
-
-
-<!-- Apps Integration Section -->
-<section id="apps-integration" class="py-16 px-8">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-        <div class="md:w-1/2">
-            <h2 class="text-3xl font-bold mb-6">We connect to all your apps</h2>
-            <p class="text-lg mb-8">Plus thousands more through APIs, custom code, and web hooks.</p>
-<!-- Free Consultation Button Styled Similarly to WhatsApp Button -->
-<a href="#contact" class="button-star-border">
-    <div class="border-gradient-bottom"></div>
-    <div class="border-gradient-top"></div>
-    <div class="inner-content">Free Consultation</div>
-</a>
-
-</a>
-        </div>
-
-        <!-- Image Section -->
-        <div class="md:w-1/2">
-            <img src="https://i.imgur.com/nb7wMTI.png" alt="Apps Integration" class="w-full h-auto">
-        </div>
-    </div>
-</section>
-
-<!-- Embed YouTube Video -->
-<section id="video" class="py-20 px-8">
-    <div class="max-w-7xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-8">Automate with Ziantra!</h2>
-        <div class="flex justify-center">
-            <iframe width="1200" height="650" src="https://www.youtube.com/embed/GkZXTbCHllM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </div>
-</section>
-
-<!-- AUTOMATION SOLUTIONS SHOWCASE SECTION -->
-<section id="automation-showcase" class="relative py-20 px-8 bg-white">
-  <div class="mx-auto max-w-5xl">
-    <div class="relative mx-auto max-w-2xl text-center">
-      <div class="relative z-10">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-          Discover Smarter, Faster Workflows with Ziantra
-        </h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          We design and build custom automations that save you time, reduce manual effort, and let you focus on what really matters.
-        </p>
-      </div>
-      <div
-        class="absolute inset-0 mx-auto h-44 max-w-xs blur-[118px] opacity-30"
-        style="background: linear-gradient(152.92deg, rgba(0, 0, 0, 0.1) 4.54%, rgba(0, 0, 0, 0.15) 34.2%, rgba(0, 0, 0, 0.05) 77.55%);"
-      ></div>
-    </div>
-    <hr class="mx-auto mt-8 h-px w-1/2 bg-gray-300" />
-    <div class="relative mt-12">
-      <ul class="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
-        <li class="transform-gpu space-y-4 rounded-xl border border-gray-200 bg-transparent p-6 shadow-sm hover:shadow-md transition-all duration-300">
-          <div class="w-fit transform-gpu rounded-full border border-gray-200 p-4 text-black shadow-sm">
-            <i class="fas fa-magic text-xl"></i>
-          </div>
-          <h4 class="text-xl font-bold tracking-tight">
-            Automate Anything
-          </h4>
-          <p class="text-gray-600">We build custom automations for any repetitive business process, using n8n, Make, APIs, and AI.</p>
-        </li>
-        <li class="transform-gpu space-y-4 rounded-xl border border-gray-200 bg-transparent p-6 shadow-sm hover:shadow-md transition-all duration-300">
-          <div class="w-fit transform-gpu rounded-full border border-gray-200 p-4 text-black shadow-sm">
-            <i class="fas fa-robot text-xl"></i>
-          </div>
-          <h4 class="text-xl font-bold tracking-tight">
-            AI Agents & Chatbots
-          </h4>
-          <p class="text-gray-600">WhatsApp, Telegram, and website chatbots that answer questions, book appointments, and qualify leads—24/7.</p>
-        </li>
-        <li class="transform-gpu space-y-4 rounded-xl border border-gray-200 bg-transparent p-6 shadow-sm hover:shadow-md transition-all duration-300">
-          <div class="w-fit transform-gpu rounded-full border border-gray-200 p-4 text-black shadow-sm">
-            <i class="fas fa-calendar-check text-xl"></i>
-          </div>
-          <h4 class="text-xl font-bold tracking-tight">
-            Booking & Scheduling
-          </h4>
-          <p class="text-gray-600">Automated appointment booking, calendar sync, reminders, follow-ups, and lead pipelines for any industry.</p>
-        </li>
-        <li class="transform-gpu space-y-4 rounded-xl border border-gray-200 bg-transparent p-6 shadow-sm hover:shadow-md transition-all duration-300">
-          <div class="w-fit transform-gpu rounded-full border border-gray-200 p-4 text-black shadow-sm">
-            <i class="fas fa-database text-xl"></i>
-          </div>
-          <h4 class="text-xl font-bold tracking-tight">
-            Custom Integrations
-          </h4>
-          <p class="text-gray-600">We connect all your apps and databases (Google, Airtable, Notion, Sheets, etc.) for seamless workflows.</p>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
-<!-- CAL.COM BOOKING SECTION -->
-<section id="book-call" class="py-12 px-8 bg-gray-100">
-  <div class="max-w-7xl mx-auto text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-6">Book a Free Consultation</h2>
-    <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-      Schedule a 15 or 30-minute call to discuss how automation can transform your business.
-    </p>
-    <div class="flex justify-center">
-      <div style="width: 100%; max-width: 800px;">
-        <iframe 
-          src="https://cal.com/sylvesteratziantra" 
-          style="width: 100%; min-height: 700px; border: 1px solid #d1d5db; border-radius: 12px; background-color: white;" 
-          frameborder="0" 
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="py-20 px-8">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Create Together</h2>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">Interested in working together? I'd love to hear about your project.</p>
-    </div>
-    <div class="flex flex-col md:flex-row gap-16 items-start">
-
-      
-      <!-- Contact Form -->
-      <div class="w-full md:w-1/2">
-        <form id="contact-form" action="https://formspree.io/f/meoggzve" method="POST" class="space-y-6">
-          <input type="hidden" name="_subject" value="New message from your website">
-          <div>
-            <label for="name" class="mono text-sm block mb-2">YOUR NAME</label>
-            <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-black transition" required>
-          </div>
-          <div>
-            <label for="email" class="mono text-sm block mb-2">EMAIL ADDRESS</label>
-            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-black transition" required>
-          </div>
-          <div>
-            <label for="message" class="mono text-sm block mb-2">YOUR MESSAGE</label>
-            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-black transition" required></textarea>
-          </div>
-          <input type="hidden" name="_subject" value="New contact form message from Ziantra site">
-          <button type="submit" class="button-star-border">
-            <div class="border-gradient-bottom"></div>
-            <div class="border-gradient-top"></div>
-            <div class="inner-content">SEND MESSAGE</div>
-          </button>
-        </form>
-
-        <div id="form-notification" class="hidden fixed bottom-6 right-6 bg-black text-white text-sm px-6 py-4 rounded shadow-lg z-50 transition-opacity duration-500 opacity-0">
-          ✅ Thank you for contacting Ziantra. We'll aim to get back to you within 24 hours.
-        </div>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="w-full md:w-1/2 flex flex-col justify-start items-center">
-        <div class="flex justify-center mb-6">
-<img src="https://i.postimg.cc/CLcpW8QJ/Whats-App-Image-2025-05-05-at-20-50-01-46180ff4.jpg" alt="Profile Picture" class="w-20 aspect-square rounded-full border-4 border-gray-300 object-cover">
-        </div>
-        <div class="text-center">
-          <h3 class="mono text-sm mb-6">CONTACT INFO</h3>
-          <div class="space-y-6">
-            <div>
-              <div class="mono text-xs text-gray-500 mb-1">EMAIL</div>
-              <div class="text-lg">sylvester@ziantra.co.uk</div>
-            </div>
-            <div>
-              <div class="mono text-xs text-gray-500 mb-1">PHONE</div>
-              <div class="text-lg">+44 07448805234</div>
-            </div>
-            <div>
-              <div class="mono text-xs text-gray-500 mb-1">BASED IN</div>
-              <div class="text-lg">London, England</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-8">
-          <h3 class="mono text-sm mb-6 text-center">SOCIAL</h3>
-          <div class="flex space-x-6 justify-center">
-            <a href="mailto:sylvester@ziantra.co.uk" class="w-12 h-12 border border-gray-300 rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all duration-300"><i class="fas fa-envelope text-sm"></i></a>
-            <a href="https://www.facebook.com/sylvester.janve.7/" target="_blank" rel="noopener" class="w-12 h-12 border border-gray-300 rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all duration-300"><i class="fab fa-facebook text-sm"></i></a>
-            <a href="https://www.instagram.com/sylvesterjanve/?hl=en" target="_blank" rel="noopener" class="w-12 h-12 border border-gray-300 rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all duration-300"><i class="fab fa-instagram text-sm"></i></a>
-            <a href="https://www.linkedin.com/in/sylvesterjanve/" target="_blank" rel="noopener" class="w-12 h-12 border border-gray-300 rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all duration-300"><i class="fab fa-linkedin-in text-sm"></i></a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-      <!-- FAQ SECTION -->
-<section id="faq" class="py-20 px-8 bg-white">
-  <div class="max-w-5xl mx-auto">
-    <div class="mb-12 flex flex-col items-center">
-      <div class="mb-4 border border-black px-3 py-1 text-xs font-medium uppercase tracking-wider mono">
-        FAQs
-      </div>
-
-      <h2 class="mb-6 text-center text-4xl font-bold tracking-tight md:text-5xl">
-        Frequently Asked Questions
-      </h2>
-
-      <p class="max-w-2xl text-center text-gray-600">
-        Find answers to common questions about automation and how Ziantra can help you streamline your business processes.
-      </p>
-    </div>
-
-    <!-- Category Tabs -->
-    <div class="mb-10 flex flex-wrap justify-center gap-2">
-      <button onclick="filterFAQs('all')" class="faq-category-btn active rounded-full px-4 py-2 text-sm font-medium transition-all bg-black text-white">
-        All
-      </button>
-      <button onclick="filterFAQs('general')" class="faq-category-btn rounded-full px-4 py-2 text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-gray-200">
-        General
-      </button>
-      <button onclick="filterFAQs('technical')" class="faq-category-btn rounded-full px-4 py-2 text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-gray-200">
-        Technical
-      </button>
-      <button onclick="filterFAQs('pricing')" class="faq-category-btn rounded-full px-4 py-2 text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-gray-200">
-        Pricing
-      </button>
-      <button onclick="filterFAQs('support')" class="faq-category-btn rounded-full px-4 py-2 text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-gray-200">
-        Support
-      </button>
-    </div>
-
-    <!-- FAQ Grid -->
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-2" id="faq-container">
-      
-      <!-- FAQ Item 1 -->
-      <div class="faq-item h-fit overflow-hidden rounded-xl border border-gray-200 bg-gray-50" style="min-height: 88px" data-category="general">
-        <button onclick="toggleNewFAQ(this)" class="flex w-full items-center justify-between p-6 text-left">
-          <h3 class="text-lg font-medium">What is AI Automation?</h3>
-          <div class="ml-4 flex-shrink-0">
-            <i class="fas fa-plus h-5 w-5 text-black faq-icon"></i>
-          </div>
-        </button>
-        <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
-          <div class="border-t border-gray-200 px-6 pb-6 pt-2">
-            <p class="text-gray-600">AI automation uses artificial intelligence to automate repetitive, manual, or time-consuming tasks — like email responses, booking systems, or lead capture — so you can focus on high-impact work.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ Item 2 -->
-      <div class="faq-item h-fit overflow-hidden rounded-xl border border-gray-200 bg-gray-50" style="min-height: 88px" data-category="general">
-        <button onclick="toggleNewFAQ(this)" class="flex w-full items-center justify-between p-6 text-left">
-          <h3 class="text-lg font-medium">How Can Ziantra Help Me?</h3>
-          <div class="ml-4 flex-shrink-0">
-            <i class="fas fa-plus h-5 w-5 text-black faq-icon"></i>
-          </div>
-        </button>
-        <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
-          <div class="border-t border-gray-200 px-6 pb-6 pt-2">
-            <p class="text-gray-600">Whether you're a freelancer, business owner, or team leader, Ziantra builds automations tailored to your needs — from simple task reminders to full AI-driven workflows integrated with your tools.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ Item 3 -->
-      <div class="faq-item h-fit overflow-hidden rounded-xl border border-gray-200 bg-gray-50" style="min-height: 88px" data-category="technical">
-        <button onclick="toggleNewFAQ(this)" class="flex w-full items-center justify-between p-6 text-left">
-          <h3 class="text-lg font-medium">Do I Need To Know Anything Technical?</h3>
-          <div class="ml-4 flex-shrink-0">
-            <i class="fas fa-plus h-5 w-5 text-black faq-icon"></i>
-          </div>
-        </button>
-        <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
-          <div class="border-t border-gray-200 px-6 pb-6 pt-2">
-            <p class="text-gray-600">Not at all. We handle everything. You tell us what you want automated — we scope, build, and maintain it. You just get the results.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ Item 4 -->
-      <div class="faq-item h-fit overflow-hidden rounded-xl border border-gray-200 bg-gray-50" style="min-height: 88px" data-category="pricing">
-        <button onclick="toggleNewFAQ(this)" class="flex w-full items-center justify-between p-6 text-left">
-          <h3 class="text-lg font-medium">Can I Start Small Without a Full Plan?</h3>
-          <div class="ml-4 flex-shrink-0">
-            <i class="fas fa-plus h-5 w-5 text-black faq-icon"></i>
-          </div>
-        </button>
-        <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
-          <div class="border-t border-gray-200 px-6 pb-6 pt-2">
-            <p class="text-gray-600">Yes — you can request a single custom automation starting at just £25/month. No need to commit to a full package right away.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ Item 5 -->
-      <div class="faq-item h-fit overflow-hidden rounded-xl border border-gray-200 bg-gray-50" style="min-height: 88px" data-category="technical">
-        <button onclick="toggleNewFAQ(this)" class="flex w-full items-center justify-between p-6 text-left">
-          <h3 class="text-lg font-medium">What Tools Can You Integrate With?</h3>
-          <div class="ml-4 flex-shrink-0">
-            <i class="fas fa-plus h-5 w-5 text-black faq-icon"></i>
-          </div>
-        </button>
-        <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
-          <div class="border-t border-gray-200 px-6 pb-6 pt-2">
-            <p class="text-gray-600">We work with tools like Gmail, Notion, Trello, Slack, Calendly, Shopify, Google Sheets, and hundreds more via API or automation platforms like Make.com and Zapier.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ Item 6 -->
-      <div class="faq-item h-fit overflow-hidden rounded-xl border border-gray-200 bg-gray-50" style="min-height: 88px" data-category="technical">
-        <button onclick="toggleNewFAQ(this)" class="flex w-full items-center justify-between p-6 text-left">
-          <h3 class="text-lg font-medium">How Long Does Setup Take?</h3>
-          <div class="ml-4 flex-shrink-0">
-            <i class="fas fa-plus h-5 w-5 text-black faq-icon"></i>
-          </div>
-        </button>
-        <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
-          <div class="border-t border-gray-200 px-6 pb-6 pt-2">
-            <p class="text-gray-600">Most basic automations are delivered within 2–4 business days. Larger workflows may take longer based on complexity. You'll always get a clear timeline before we start.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ Item 7 -->
-      <div class="faq-item h-fit overflow-hidden rounded-xl border border-gray-200 bg-gray-50" style="min-height: 88px" data-category="pricing">
-        <button onclick="toggleNewFAQ(this)" class="flex w-full items-center justify-between p-6 text-left">
-          <h3 class="text-lg font-medium">Is There a Contract or Commitment?</h3>
-          <div class="ml-4 flex-shrink-0">
-            <i class="fas fa-plus h-5 w-5 text-black faq-icon"></i>
-          </div>
-        </button>
-        <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
-          <div class="border-t border-gray-200 px-6 pb-6 pt-2">
-            <p class="text-gray-600">No contracts. You can cancel or downgrade any time. We work on a flexible month-to-month basis.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ Item 8 -->
-      <div class="faq-item h-fit overflow-hidden rounded-xl border border-gray-200 bg-gray-50" style="min-height: 88px" data-category="support">
-        <button onclick="toggleNewFAQ(this)" class="flex w-full items-center justify-between p-6 text-left">
-          <h3 class="text-lg font-medium">What If I Want Something Outside The Plans?</h3>
-          <div class="ml-4 flex-shrink-0">
-            <i class="fas fa-plus h-5 w-5 text-black faq-icon"></i>
-          </div>
-        </button>
-        <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
-          <div class="border-t border-gray-200 px-6 pb-6 pt-2">
-            <p class="text-gray-600">No problem — just get in touch and tell us what you need. We can quote you for one-off projects or build custom solutions outside the predefined packages.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Contact CTA -->
-    <div class="mt-16 text-center">
-      <p class="mb-4 text-gray-600">
-        Can't find what you're looking for?
-      </p>
-      <a href="#contact" class="inline-flex items-center justify-center rounded-lg border-2 border-black px-6 py-3 font-medium transition-colors hover:bg-black hover:text-white">
-        Contact Support
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="py-12 px-8 border-t border-gray-200">
-  <div class="flex space-x-6">
-    <a href="#work" class="footer-link mono text-sm">Work</a>
-    <a href="#about-and-skills" class="footer-link mono text-sm">About</a>
-    <a href="#contact" class="footer-link mono text-sm">Contact</a>
-    <a href="https://www.instagram.com/sylvesterjanve/?hl=en" target="_blank" rel="noopener" class="footer-link mono text-sm">Instagram</a>
-    <a href="/privacy.html" class="footer-link mono text-sm">Privacy Policy</a>
-    <a href="/terms.html" class="footer-link mono text-sm">Terms of Service</a>
-</div>
-
-    </div>
-  </div>
-</footer>
-
-    <script>
-        // Three.js 3D Model Interaction
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set up Three.js scene
-            const container = document.getElementById('threejs-container');
-            const scene = new THREE.Scene();
-            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-            const renderer = new THREE.WebGLRenderer({ 
-                alpha: true,
-                antialias: true 
-            });
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            container.appendChild(renderer.domElement);
-            
-            // Create multiple transparent 3D objects
-            const objects = [];
-            const geometries = [
-                new THREE.IcosahedronGeometry(1, 0),
-                new THREE.TorusGeometry(0.8, 0.3, 16, 32),
-                new THREE.OctahedronGeometry(1, 0),
-                new THREE.DodecahedronGeometry(1, 0)
-            ];
-            
-            const positions = [
-                { x: -4, y: 2, z: -5 },
-                { x: 3, y: -1, z: -7 },
-                { x: 2, y: 3, z: -10 },
-                { x: -3, y: -2, z: -8 }
-            ];
-            
-            const colors = [
-                0x000000,  // Pure black
-                0x333333,  // Dark gray
-                0x666666,  // Medium gray
-                0x999999   // Light gray
-            ];
-            
-            geometries.forEach((geometry, index) => {
-                const material = new THREE.MeshPhongMaterial({
-                    color: colors[index],
-                    transparent: true,
-                    opacity: 0.1,
-                    wireframe: true,
-                    shininess: 100,
-                    specular: 0x111111
-                });
-                
-                const mesh = new THREE.Mesh(geometry, material);
-                mesh.position.set(positions[index].x, positions[index].y, positions[index].z);
-                
-                // Add random initial rotation
-                mesh.rotation.set(
-                    Math.random() * Math.PI,
-                    Math.random() * Math.PI,
-                    Math.random() * Math.PI
-                );
-                
-                // Add random float direction
-                mesh.userData = {
-                    floatX: (Math.random() - 0.5) * 0.005,
-                    floatY: (Math.random() - 0.5) * 0.005,
-                    floatZ: (Math.random() - 0.5) * 0.005,
-                    originalPosition: { x: positions[index].x, y: positions[index].y, z: positions[index].z }
-                };
-                
-                scene.add(mesh);
-                objects.push(mesh);
-            });
-            
-            // Add subtle ambient light
-            const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-            scene.add(ambientLight);
-            
-            // Add directional light
-            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
-            directionalLight.position.set(1, 1, 1);
-            scene.add(directionalLight);
-            
-            // Position camera
-            camera.position.z = 5;
-            
-            // Mouse position
-            const mouse = {
-                x: 0,
-                y: 0
-            };
-            
-            // Handle mouse move
-            document.addEventListener('mousemove', (event) => {
-                mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-                mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-            });
-            
-            // Animation loop
-            function animate() {
-                requestAnimationFrame(animate);
-                
-                // Update all objects
-                objects.forEach((object, index) => {
-                    // Make objects move away from cursor
-                    const distanceThreshold = 2;
-                    const distanceX = mouse.x * 4 - (object.position.x / 2);
-                    const distanceY = mouse.y * 3 - (object.position.y / 2);
-                    const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
-                    
-                    if (distance < distanceThreshold) {
-                        // Move away from cursor with stronger force for closer distances
-                        const force = (distanceThreshold - distance) * 0.15;
-                        object.position.x -= distanceX / distance * force;
-                        object.position.y -= distanceY / distance * force;
-                    } else {
-                        // Return to original position with some floating movement
-                        const returnSpeed = 0.02;
-                        object.position.x += (object.userData.originalPosition.x - object.position.x) * returnSpeed;
-                        object.position.y += (object.userData.originalPosition.y - object.position.y) * returnSpeed;
-                        
-                        // Add gentle floating movement
-                        object.position.x += Math.sin(Date.now() * 0.001 + index) * 0.01;
-                        object.position.y += Math.cos(Date.now() * 0.001 + index) * 0.01;
-                    }
-                    
-                    // Apply the floating rotation
-                    object.rotation.x += object.userData.floatX;
-                    object.rotation.y += object.userData.floatY;
-                    object.rotation.z += object.userData.floatZ;
-                });
-                
-                renderer.render(scene, camera);
-            }
-            
-            // Handle window resize
-            window.addEventListener('resize', () => {
-                camera.aspect = window.innerWidth / window.innerHeight;
-                camera.updateProjectionMatrix();
-                renderer.setSize(window.innerWidth, window.innerHeight);
-            });
-            
-            animate();
-            
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-        });
-    </script>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ziantra | Creative Portfolio</title>
-<!-- POPUP OPEN MODAL -->
-<script>
-    function openProjectModal(projectId) {
-        // Show the modal
-        const modal = document.getElementById('modal');
-        modal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
-        
-        // Set the content based on the project clicked
-        let content = '';
-        if (projectId === 'project1') {
-            content = `
-                <h3 class="text-3xl font-bold mb-4">AI-Driven Appointment Booking Agent for Dental Practices</h3>
-                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-80 object-cover mb-4" />
-                <p class="text-lg text-gray-600">The AI-powered agent is an innovative solution designed to transform the way dental practices manage appointments and interact with patients. By leveraging state-of-the-art artificial intelligence, this agent not only handles routine appointment scheduling but also answers complex queries, provides support, and integrates seamlessly into existing practice management systems. The AI agent works around the clock, ensuring that patient calls and queries are always attended to. It intelligently learns from every interaction, continuously improving its efficiency and accuracy. With full integration into the dentist's calendar, it can schedule, reschedule, and even cancel appointments based on real-time availability, ensuring a smooth operation with no manual input.</p>
-                
-                <h4 class="text-xl font-semibold mt-4 mb-2">Key Features:</h4>
-                <ul class="list-disc list-inside text-lg text-gray-600">
-                    <li><strong>Automated Phone Call Handling</strong>: The AI answers all incoming calls, efficiently handling patient queries and appointment scheduling. No more missed calls or rushed phone conversations.</li>
-                    <li><strong>Real-Time Calendar Integration</strong>: The agent can read, update, and modify the dentist's calendar in real-time, ensuring there are no scheduling conflicts or overlaps. It syncs across devices and calendars automatically.</li>
-                    <li><strong>Automated Appointment Confirmation and Reminders</strong>: Sends out confirmation emails and SMS messages to patients immediately after scheduling an appointment. The system also sends automated reminders at regular intervals, reducing the chances of no-shows.</li>
-                    <li><strong>Personalized Interaction</strong>: The system is capable of personalized interactions with patients, such as greeting them by name, addressing their concerns, and even suggesting products or services based on previous visits.</li>
-                    <li><strong>Analytics and Reporting</strong>: The system tracks all appointment data, providing detailed reports on patient appointments, cancellations, and missed calls. This helps the practice identify trends and optimize appointment scheduling.</li>
-                    <li><strong>Multilingual Support</strong>: The agent is designed to understand and communicate in multiple languages, making it accessible to patients from diverse linguistic backgrounds.</li>
-                </ul>
-
-                <h4 class="text-xl font-semibold mt-4 mb-2">Benefits:</h4>
-                <p class="text-lg text-gray-600">This solution streamlines the administrative tasks involved in running a dental practice, significantly improving operational efficiency. By automating routine appointment-related tasks, dental staff can focus on providing better patient care rather than dealing with scheduling conflicts and phone calls. The agent's 24/7 availability ensures that patients can schedule appointments or get answers to their queries at any time, even outside business hours. The automated reminders reduce no-shows, and the system's seamless integration into the practice's calendar makes appointment management a breeze. This leads to better patient retention, higher satisfaction, and ultimately increased revenue.</p>
-            `;
-        } else if (projectId === 'project2') {
-            content = `
-                <h3 class="text-3xl font-bold mb-4">Responsive Website Development and Business Email Setup</h3>
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-80 object-cover mb-4" />
-                <p class="text-lg text-gray-600">For this project, we were tasked with designing and developing a responsive website for a client who needed a modern and user-friendly web presence. The goal was to create a website that would not only be visually appealing but also provide a seamless experience for visitors across all devices—desktop, tablet, and mobile. We focused on creating an intuitive navigation structure, engaging content, and a design that truly reflects the brand's ethos. Along with the website development, we also set up professional business email accounts, ensuring that the client could communicate efficiently with their customers. We conducted thorough testing to ensure that the website was optimized for speed, security, and cross-browser compatibility, and the email accounts were fully functional, with all necessary security protocols in place.</p>
-
-                <h4 class="text-xl font-semibold mt-4 mb-2">Key Features:</h4>
-                <ul class="list-disc list-inside text-lg text-gray-600">
-                    <li><strong>Responsive Design</strong>: Designed with a mobile-first approach, ensuring that the website looks and works seamlessly across all devices and screen sizes, from mobile phones to desktops.</li>
-                    <li><strong>User-Centric Navigation</strong>: Implemented a simple, intuitive navigation system, allowing users to quickly find the information they need, improving the overall user experience.</li>
-                    <li><strong>Content Management System (CMS)</strong>: Integrated a CMS that allows the client to easily update the website's content, manage blog posts, and upload images without needing technical skills.</li>
-                    <li><strong>Cross-Browser Compatibility</strong>: Ensured that the website works flawlessly on all major browsers, including Chrome, Firefox, Safari, and Edge, providing a consistent experience for all users.</li>
-                    <li><strong>Secure Business Email Setup</strong>: Configured professional email accounts with advanced security features, including spam filters, automatic forwarding, and custom email signatures.</li>
-                    <li><strong>SEO Optimization</strong>: Optimized the website for search engines to ensure that the client's site ranks higher in search results, driving more organic traffic.</li>
-                    <li><strong>Analytics Integration</strong>: Integrated Google Analytics to track website traffic, providing the client with valuable insights into user behavior and site performance.</li>
-                </ul>
-
-                <h4 class="text-xl font-semibold mt-4 mb-2">Benefits:</h4>
-                <p class="text-lg text-gray-600">This project provided the client with a modern, professional, and highly functional website that serves as the foundation for their online presence. By optimizing the website for mobile devices and ensuring compatibility across browsers, we helped them reach a wider audience. The addition of a CMS empowers the client to make real-time updates to their site, saving them time and money in the long term. The integration of SEO strategies and analytics allows them to monitor their website's performance and improve its visibility. Overall, the website is not just a digital brochure but a powerful tool for the client's business growth, facilitating communication, marketing, and customer engagement.</p>
-            `;
-        } else if (projectId === 'project3') {
-            content = `
-                <h3 class="text-3xl font-bold mb-4">AI-Powered Lead Follow-Up Automation for Real Estate Agents</h3>
-                <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-80 object-cover mb-4" />
-                <p class="text-lg text-gray-600">This AI-powered automation system was developed to help real estate agents follow up with leads automatically, reducing the manual effort involved in lead nurturing and increasing conversion rates. The system is designed to engage leads via email, SMS, and phone calls, providing timely follow-ups that are both personalized and contextually relevant. It tracks every lead's status, engagement level, and interest, and sends targeted messages that move the lead down the sales funnel. Additionally, the system can automatically schedule meetings or property viewings based on the lead's availability and preferences, optimizing the agent's workflow.</p>
-
-                <h4 class="text-xl font-semibold mt-4 mb-2">Key Features:</h4>
-                <ul class="list-disc list-inside text-lg text-gray-600">
-                    <li><strong>Automated Lead Engagement</strong>: Utilizes AI to send personalized follow-up messages through email, SMS, and phone calls, ensuring that no lead goes unnoticed.</li>
-                    <li><strong>AI-Powered Content Personalization</strong>: The system tailors communication based on the lead's preferences, history, and behavior, delivering highly relevant messages that resonate with the lead.</li>
-                    <li><strong>Smart Follow-Up Scheduling</strong>: The system automatically schedules follow-up reminders and meetings based on lead behavior, ensuring that agents never miss a follow-up opportunity.</li>
-                    <li><strong>CRM Integration</strong>: Seamlessly integrates with the agent's CRM, ensuring that lead data is always up-to-date and that the system works as an extension of the agent's workflow.</li>
-                    <li><strong>Multi-Channel Communication</strong>: Supports communication through multiple channels, including email, SMS, and automated phone calls, making it easy to reach leads no matter where they are.</li>
-                    <li><strong>24/7 Availability</strong>: Operates round the clock, enabling agents to follow up with leads at any time, increasing the chances of successful conversions.</li>
-                    <li><strong>Performance Analytics</strong>: Provides detailed reports and analytics on lead engagement, response rates, and conversion trends, allowing agents to fine-tune their strategies.</li>
-                </ul>
-
-                <h4 class="text-xl font-semibold mt-4 mb-2">Benefits:</h4>
-                <p class="text-lg text-gray-600">By automating the lead follow-up process, real estate agents can focus on high-value tasks like closing deals, while the system handles the time-consuming task of lead nurturing. The AI personalization ensures that each lead is engaged with the right message at the right time, improving the chances of conversion. The integration with CRM systems ensures that all lead information is up-to-date and that agents can track lead progress effortlessly. The round-the-clock availability of the system ensures that no lead is ever missed, regardless of time zone or business hours. As a result, real estate agents can achieve higher conversion rates and close more deals in less time, making their business more efficient and profitable.</p>
-            `;
-        }
-
-        // Insert the content into the modal
-        document.getElementById('modal-content').innerHTML = content;
-    }
-
-    function closeProjectModal() {
-        // Hide the modal
-        const modal = document.getElementById('modal');
-        modal.classList.add('hidden');
-        document.body.style.overflow = ''; // Restore scrolling
-    }
-
-    // Close the modal if the user clicks outside of the modal content
-    document.getElementById('modal').addEventListener('click', function(event) {
-        if (event.target === this) {
-            closeProjectModal();
-        }
-    });
-
-    // Close modal with ESC key
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
-            const modal = document.getElementById('modal');
-            if (!modal.classList.contains('hidden')) {
-                closeProjectModal();
-            }
-        }
-    });
-</script>
-<script>
-  const form = document.getElementById("contact-form");
-  const notification = document.getElementById("form-notification");
-
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        form.reset();
-        showNotification("✅ Thank you for contacting Ziantra. We'll aim to get back to you within 24 hours.");
-      } else {
-        showNotification("❌ Something went wrong. Please try again or email sylvester@ziantra.co.uk directly.");
-      }
-    } catch (error) {
-      showNotification("❌ Network error. Please check your connection and try again.");
-    }
-  });
-
-  function showNotification(message) {
-    notification.textContent = message;
-    notification.classList.remove("hidden");
-    notification.classList.add("opacity-100");
-
-    setTimeout(() => {
-      notification.classList.remove("opacity-100");
-      notification.classList.add("opacity-0");
-      setTimeout(() => {
-        notification.classList.add("hidden");
-      }, 500);
-    }, 4000); // Display for 4 seconds
-  }
-</script>
-<script>
-  // New FAQ functionality
-  function toggleNewFAQ(button) {
-    const content = button.nextElementSibling;
-    const icon = button.querySelector('.faq-icon');
-    const faqItem = button.closest('.faq-item');
-    
-    // Check if this FAQ is currently open
-    const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
-    
-    // Close all FAQ items
-    document.querySelectorAll('.faq-content').forEach(el => {
-      el.style.maxHeight = '0px';
-      el.closest('.faq-item').classList.remove('shadow-lg');
-    });
-    
-    document.querySelectorAll('.faq-icon').forEach(i => {
-      i.className = 'fas fa-plus h-5 w-5 text-black faq-icon';
-    });
-
-    // If this wasn't open, open it
-    if (!isOpen) {
-      content.style.maxHeight = content.scrollHeight + 'px';
-      icon.className = 'fas fa-minus h-5 w-5 text-black faq-icon';
-      faqItem.classList.add('shadow-lg');
-    }
-  }
-
-  function filterFAQs(category) {
-    const faqItems = document.querySelectorAll('.faq-item');
-    const categoryBtns = document.querySelectorAll('.faq-category-btn');
-    
-    // Update active button
-    categoryBtns.forEach(btn => {
-      btn.classList.remove('active', 'bg-black', 'text-white');
-      btn.classList.add('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
-    });
-    
-    event.target.classList.add('active', 'bg-black', 'text-white');
-    event.target.classList.remove('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
-    
-    // Filter FAQ items
-    faqItems.forEach(item => {
-      if (category === 'all' || item.dataset.category === category) {
-        item.style.display = 'block';
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(20px)';
-        
-        setTimeout(() => {
-          item.style.transition = 'all 0.3s ease';
-          item.style.opacity = '1';
-          item.style.transform = 'translateY(0)';
-        }, 50);
-      } else {
-        item.style.display = 'none';
-      }
-    });
-  }
-</script>
-<script>
-  function openVideoModal() {
-    document.getElementById('video-modal').classList.remove('hidden');
-    document.body.style.overflow = 'hidden'; // Prevent background scrolling
-  }
-
-  function closeVideoModal() {
-    document.getElementById('video-modal').classList.add('hidden');
-    document.body.style.overflow = ''; // Restore scrolling
-  }
-
-  // Close modal when clicking outside of modal content
-  document.addEventListener('click', function(event) {
-    const modal = document.getElementById('video-modal');
-    if (!modal.classList.contains('hidden') && event.target === modal) {
-      closeVideoModal();
-    }
-  });
-
-  // Close modal with ESC key
-  document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-      const modal = document.getElementById('video-modal');
-      if (!modal.classList.contains('hidden')) {
-        closeVideoModal();
-      }
-    }
-  });
-</script>
-<!-- Automations Modal -->
-<div id="automations-modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 hidden">
-  <div class="bg-white p-8 rounded-lg max-w-3xl w-full overflow-y-auto max-h-[90vh] relative">
-    <button onclick="closeAutomationsModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200 text-2xl font-bold w-8 h-8 flex items-center justify-center">×</button>
-    <div class="w-full text-center mb-6 pr-8">
-      <h2 class="text-2xl font-bold mb-2">Our Automation Services</h2>
-      <p class="text-gray-600 mb-4">Explore the range of automations Ziantra offers to streamline your business processes.</p>
-    </div>
-    <div class="space-y-6 text-left">
-
-      <!-- Inbox & Email Automation -->
-      <div>
-        <h3 class="text-xl font-bold mb-2"> Inbox & Email Automation</h3>
-        <p class="text-gray-600 mb-4">Streamline your email workflows and stay on top of communication effortlessly.</p>
-        <ul class="list-disc pl-5 text-gray-600 space-y-2">
-          <li><strong>Smart Gmail Inbox Organizer:</strong> Auto-label emails for a cleaner, more manageable inbox.</li>
-          <li><strong>AI-Powered Email Summarizer & Replies:</strong> Summarize and draft responses to save time.</li>
-          <li><strong>Outlook Email Organizer with AI:</strong> Automate sorting and categorizing of incoming emails.</li>
-        </ul>
-      </div>
-
-      <!-- Calendar & Appointment Automation -->
-      <div>
-        <h3 class="text-xl font-bold mb-2">Calendar & Appointment Automation</h3>
-        <ul class="list-disc pl-5 text-gray-600 space-y-2">
-          <li><strong>AI Calendar Scheduling Assistant:</strong> Manage bookings and prevent double-booking automatically.</li>
-          <li><strong>Auto-Booking & Follow-Up with Cal.com:</strong> Seamless client booking with automated follow-ups.</li>
-          <li><strong>Meeting Summary Generator:</strong> Instantly generate notes and action items after every meeting.</li>
-        </ul>
-      </div>
-
-      <!-- Customer Engagement Automation -->
-      <div>
-        <h3 class="text-xl font-bold mb-2">Customer Engagement (WhatsApp & Telegram Bots)</h3>
-        <ul class="list-disc pl-5 text-gray-600 space-y-2">
-          <li><strong>WhatsApp AI Auto-Responder:</strong> Handle client inquiries with instant AI-generated replies.</li>
-          <li><strong>Telegram AI Assistant with Memory:</strong> Support customers on Telegram with ongoing context awareness.</li>
-          <li><strong>Children's Storytelling Bots:</strong> Engage kids with AI-powered storytelling on Telegram in English or Arabic.</li>
-        </ul>
-      </div>
-
-      <!-- Social Media Automation -->
-      <div>
-        <h3 class="text-xl font-bold mb-2">Social Media Automation</h3>
-        <ul class="list-disc pl-5 text-gray-600 space-y-2">
-          <li><strong>AI Social Media Post Generator:</strong> Automatically create engaging posts and captions.</li>
-          <li><strong>Auto-Post YouTube to Twitter/X:</strong> Share your latest videos to social media without lifting a finger.</li>
-          <li><strong>LinkedIn Outreach Automation:</strong> Connect with potential leads through personalized AI messaging.</li>
-        </ul>
-      </div>
-
-      <!-- Business Process Automation -->
-      <div>
-        <h3 class="text-xl font-bold mb-2">Business Process Automation (Google Sheets, Airtable, Notion)</h3>
-        <ul class="list-disc pl-5 text-gray-600 space-y-2">
-          <li><strong>Google Sheets Data Manager:</strong> Auto-update spreadsheets with customer data or leads.</li>
-          <li><strong>Airtable AI Data Analysis Agent:</strong> Analyze and interact with your Airtable data via AI.</li>
-          <li><strong>Notion Task Manager Assistant:</strong> Automate task tracking and team collaboration in Notion.</li>
-        </ul>
-      </div>
-
-      <!-- E-Commerce & Customer Service -->
-      <div>
-        <h3 class="text-xl font-bold mb-2">🛒 E-Commerce & Customer Service</h3>
-        <ul class="list-disc pl-5 text-gray-600 space-y-2">
-          <li><strong>WooCommerce Customer Chatbot:</strong> Handle customer inquiries and order updates automatically.</li>
-          <li><strong>Automated Order Notifications:</strong> Keep your customers informed at every order stage.</li>
-        </ul>
-      </div>
-
-      <!-- Research & Content Automation -->
-      <div>
-        <h3 class="text-xl font-bold mb-2">Research & Content Automation</h3>
-        <ul class="list-disc pl-5 text-gray-600 space-y-2">
-          <li><strong>AI Market Research Agent:</strong> Scrape and summarize market data for strategic insights.</li>
-          <li><strong>Blog Post Generator:</strong> Create fully optimized blog posts based on your keywords.</li>
-          <li><strong>Video & Podcast Summary Tools:</strong> Turn long content into digestible highlights for your audience.</li>
-        </ul>
-      </div>
-
-      <!-- Closing Block -->
-      <div>
-        <h3 class="text-xl font-bold mb-2">More Coming Soon</h3>
-        <p class="text-gray-600">We're continuously adding new solutions. Have something in mind? <a href="#contact" onclick="closeAutomationsModal()" class="underline text-black">Contact us</a> and let's make it happen.</p>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- Automations Modal Script -->
-<script>
-  function openAutomationsModal() {
-    document.getElementById('automations-modal').classList.remove('hidden');
-    document.body.style.overflow = 'hidden'; // Prevent background scrolling
-  }
-
-  function closeAutomationsModal() {
-    document.getElementById('automations-modal').classList.add('hidden');
-    document.body.style.overflow = ''; // Restore scrolling
-  }
-
-  // Close modal when clicking outside of modal content
-  document.addEventListener('click', function(event) {
-    const modal = document.getElementById('automations-modal');
-    if (!modal.classList.contains('hidden') && event.target === modal) {
-      closeAutomationsModal();
-    }
-  });
-
-  // Close modal with ESC key
-  document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-      const modal = document.getElementById('automations-modal');
-      if (!modal.classList.contains('hidden')) {
-        closeAutomationsModal();
-      }
-    }
-  });
-</script>
-
-      <!-- Calendar, WhatsApp, Social Media, Business Automation, etc. -->
-
-      <div>
-        <h3 class="text-xl font-bold mb-2">More Coming Soon</h3>
-        <p class="text-gray-600">We're continuously adding new solutions. Have something in mind? <a href="#contact" class="underline text-black">Contact us</a> and let's make it happen.</p>
-      </div>
-
-    </div>
-  </div>
-</div>
-<!-- Care Sector Discount Modal -->
-<div id="care-sector-modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 hidden">
-  <div class="bg-white p-8 rounded-lg max-w-5xl w-full overflow-y-auto max-h-[90vh] relative">
-    <button onclick="closeCareSectorModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200 text-2xl font-bold w-8 h-8 flex items-center justify-center">×</button>
-    <div class="w-full text-center mb-6 pr-8">
-      <h2 class="text-3xl font-bold mb-2">Special Offer for Care Home Professionals</h2>
-      <p class="text-gray-600 mb-4 max-w-3xl mx-auto">
-        For Homes Managers, Care Staff, and Support Workers across the UK.  
-        <strong>Spend less time on admin. Spend more time with your young people.</strong>
-      </p>
-      <p class="text-red-600 font-bold text-lg mb-4 line-through">Usually £75/month</p>
-      <p class="text-2xl font-bold text-green-700 mb-8">Now Just £40/month — For a Limited Time</p>
-    </div>
-
-    <div class="space-y-6 text-left">
-
-      <!-- Personal Story -->
-      <div class="text-center mb-8">
-        <h3 class="text-xl font-bold mb-2">Why I Created This</h3>
-        <p class="text-gray-600 max-w-3xl mx-auto">
-          I've been where you are — spending late nights in front of the computer, trying to get ready for Ofsted,
-          sorting endless emails, and preparing paperwork while knowing you should be **spending time with the young people** you're there to support.
-          <br><br>
-          That's why I built these automations — to **give you your time back**, cut down screen time, and help you **stay ahead of Ofsted** effortlessly.
-        </p>
-      </div>
-
-      <!-- Two Side-by-Side Automations -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-        <!-- Automation 1 -->
-        <div class="border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition">
-          <h3 class="text-xl font-bold mb-4">AI Email Organiser for Care Teams</h3>
-          <ul class="list-disc pl-5 text-gray-600 space-y-2">
-            <li>Auto-label and organize all your incoming emails.</li>
-            <li>Draft responses to key messages based on your team's instructions.</li>
-            <li>Reduce clutter and make inbox management effortless.</li>
-            <li>AI trained on your company's email patterns and needs.</li>
-          </ul>
-        </div>
-
-        <!-- Automation 2 -->
-        <div class="border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition">
-          <h3 class="text-xl font-bold mb-4"> Ofsted & Policy Compliance AI Assistant</h3>
-          <ul class="list-disc pl-5 text-gray-600 space-y-2">
-            <li>Instantly answers questions about your company's policies & procedures.</li>
-            <li>Fetches Ofsted compliance info, risk assessments, safeguarding, and more.</li>
-            <li>Provides summaries or allows staff to chat back and forth with AI for clarity.</li>
-            <li>Always up-to-date with your company documents and Ofsted regulations.</li>
-          </ul>
-        </div>
-
-      </div>
-
-      <!-- Benefits -->
-      <div class="text-center mt-8">
-        <h3 class="text-xl font-bold mb-4">Here's What You Get — All for Just £40/Month</h3>
-        <ul class="list-disc pl-5 text-gray-600 space-y-2 max-w-2xl mx-auto text-left">
-          <li>Slash your admin time with AI-powered tools.</li>
-          <li>Stay Ofsted-ready 24/7 with instant policy answers.</li>
-          <li>Free up your staff to focus on real care work, not paperwork.</li>
-        </ul>
-      </div>
-
-      <!-- Call to Action -->
-      <div class="text-center mt-8">
-        <a href="#contact" onclick="closeCareSectorModal()" class="button-star-border">
-            <div class="border-gradient-bottom"></div>
-            <div class="border-gradient-top"></div>
-            <div class="inner-content">Claim This £40 Offer Now</div>
-        </a>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<script>
-  function openCareSectorModal() {
-    document.getElementById('care-sector-modal').classList.remove('hidden');
-    document.body.style.overflow = 'hidden'; // Prevent background scrolling
-  }
-
-  function closeCareSectorModal() {
-    document.getElementById('care-sector-modal').classList.add('hidden');
-    document.body.style.overflow = ''; // Restore scrolling
-  }
-
-  // Close on outside click
-  document.addEventListener('click', function(event) {
-    const modal = document.getElementById('care-sector-modal');
-    if (!modal.classList.contains('hidden') && event.target === modal) {
-      closeCareSectorModal();
-    }
-  });
-
-  // Close modal with ESC key
-  document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-      const modal = document.getElementById('care-sector-modal');
-      if (!modal.classList.contains('hidden')) {
-        closeCareSectorModal();
-      }
-    }
-  });
-</script>
-
+    </footer>
 </body>
 </html>
